@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="" code="" name="Expired Items Count" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="" code="" name=""/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>*</name>
+	  <uid>*</uid>
+	  <code>*</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="*" disaggregation="*">
+           <annotation>
+				Select sum(quantity)
+				from openmrs.inv_item i,openmrs.inv_item_stock_detail sd
+				where i.item_id = sd.item_id
+				and i.has_experation = 1
+				and i.quantity
+				and sd.expiration
+    	   </annotation>
+  	     </dataValueTemplate>
+	  </dataValueTemplates>
+     </reportTemplate>
+</reportTemplates>

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="FYDYkdQfQO1" code="ad01" name="admissions" type="int"/>
+	   <dataElement uid="bfj7nBkDppI" code="ad02" name="readmissions" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="binNELAYYzV" attributeOptionCombo="SKniVEThyX6" code="admiss01" name="admiss"/>
+	   <disaggregation uid="Ft3Rit8XwkS" attributeOptionCombo="SKniVEThyX6" code="AbY01" name="Above 5 Years"/>
+	   <disaggregation uid="iXHm3edyD0o" attributeOptionCombo="SKniVEThyX6" code="UnY01" name="Under 5 Years"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>Admissions and Readmissions Report</name>
+	  <uid>QTH0GWrC9sm</uid>
+	  <code>adrd01</code>
+	  <periodType>Daily</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="ad01" disaggregation="admiss01">
+           <annotation>
+				SELECT count(*) 
+				from (
+					SELECT v.patient_id,v.location_id,min(v.date_started) as date_val 
+					FROM openmrs.visit v
+					where v.voided = 0
+					GROUP By v.patient_id
+				) s 
+				where Date(s.date_val) >= :startOfPeriod
+				and DATE(s.date_val) &lt;= :endOfPeriod
+				and s.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+  	     <dataValueTemplate dataElement="ad02" disaggregation="admiss01">
+           <annotation>
+				select count(*) 
+				from openmrs.visit v where v.visit_id NOT IN ( 
+					select q.visit_id from (
+						SELECT v.visit_id,min(v.date_started) as date_val 
+						FROM openmrs.visit v
+						where v.voided = 0
+						GROUP By v.patient_id
+					 ) q)
+				and v.voided = 0
+				and Date(v.date_started) >= :startOfPeriod
+				and DATE(v.date_started) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <dataValueTemplate dataElement="ad01" disaggregation="AbY01">
+           <annotation>
+				SELECT count(*) 
+				from (
+					SELECT v.patient_id,v.location_id,p.birthdate,min(v.date_started) as date_val 
+					FROM openmrs.visit v,openmrs.person p
+					where v.voided = 0
+					and v.patient_id = p.person_id
+					GROUP By v.patient_id
+				) s 
+				where 5 >= (YEAR(s.date_val) - YEAR(s.birthdate))
+				and DATE(s.date_val) >= :startOfPeriod
+				and DATE(s.date_val) &lt;= :endOfPeriod
+				and s.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="ad01" disaggregation="UnY01">
+           <annotation>
+				SELECT count(*) 
+				from (
+					SELECT v.patient_id,v.location_id,p.birthdate,min(v.date_started) as date_val 
+					FROM openmrs.visit v,openmrs.person p
+					where v.voided = 0
+					and v.patient_id = p.person_id
+					GROUP By v.patient_id
+				) s 
+				where 5 &lt; (YEAR(s.date_val) - YEAR(s.birthdate))
+				and DATE(s.date_val) >= :startOfPeriod
+				and DATE(s.date_val) &lt;= :endOfPeriod
+				and s.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+  	     <dataValueTemplate dataElement="ad02" disaggregation="AbY01">
+           <annotation>
+				select count(*) 
+				from openmrs.visit v,openmrs.person p 
+				where v.visit_id NOT IN ( 
+					select q.visit_id from (
+						SELECT v.visit_id,min(v.date_started) as date_val 
+						FROM openmrs.visit v
+						where v.voided = 0
+						GROUP By v.patient_id
+					 ) q)
+				and v.voided = 0
+				and v.patient_id = p.person_id
+				and 5 >= (YEAR(v.date_started) - YEAR(p.birthdate))
+				and DATE(v.date_started) >= :startOfPeriod
+				and DATE(v.date_started) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+  	     <dataValueTemplate dataElement="ad02" disaggregation="UnY01">
+           <annotation>	
+				select count(*) 
+				from openmrs.visit v,openmrs.person p
+				where v.visit_id NOT IN ( 
+					select q.visit_id from (
+						SELECT v.visit_id,min(v.date_started) as date_val 
+						FROM openmrs.visit v
+						where v.voided = 0
+						GROUP By v.patient_id
+					 ) q)
+				and v.voided = 0
+				and v.patient_id = p.person_id
+				and 5 &lt; (YEAR(v.date_started) - YEAR(p.birthdate))
+				and DATE(v.date_started) >= :startOfPeriod
+				and DATE(v.date_started) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>

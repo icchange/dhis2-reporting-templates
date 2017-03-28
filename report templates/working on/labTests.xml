@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="defaulttotal01" name="default"/>
+     </disaggregations>
+	 
+	 <dataElementQuerys>
+		<dataElementQuery prefix="labtest" codeprefix="labtestcode" disaggregation="defaulttotal01" >
+			<annotation>
+				SELECT cn.concept_id,cn.name
+				FROM openmrs.concept_name cn,openmrs.concept c,openmrs.concept_class cc 
+				where cn.concept_id = c.concept_id 
+				and c.class_id = cc.concept_class_id
+				and cc.name in('Test','KMRI_Labs','labset')
+				and cn.concept_name_type = 'FULLY_SPECIFIED'
+				and cn.locale = 'en'
+  			</annotation>	
+		</dataElementQuery>
+	 </dataElementQuerys>
+  
+     <reportTemplate>
+	  <name>*</name>
+	  <uid>*</uid>
+	  <code>*</code>
+	  <periodType>Monthly</periodType>
+	  <metaDataValueTemplates>
+		<metaDataValueTemplate disaggregation="defaulttotal01">
+           <annotation>
+				select count(*)
+				from openmrs.laboratory_test l
+				where l.lab_test_concept_id = #metaDataId
+				and DATE(l.date_created) >= :startOfPeriod
+				and DATE(l.date_created) &lt;= :endOfPeriod
+				and l.lab_location_id = :locationId
+    	   </annotation>
+  	    </metaDataValueTemplate>
+	  </metaDataValueTemplates>
+     </reportTemplate>
+	 
+</reportTemplates>

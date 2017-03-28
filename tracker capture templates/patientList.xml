@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<trackerCapture xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+
+	<reportName>Patient List</reportName>
+	<trackedEntity>xGANU2hDmbY</trackedEntity>
+	<query>
+		SELECT p.person_id as id,pn.given_name as first_name,pn.family_name as last_name,pa.optOut as optOut
+		FROM openmrs.person_name pn, openmrs.person p,openmrs.person_address pa
+		where pn.person_id = p.person_id
+		and pa.person_id = p.person_id
+		and pa.preferred = 1
+		and pn.preferred = 1
+	</query>
+	<attributeKey>Openmrs Id Number</attributeKey>
+	
+	<attributes>
+		<attribute uid="QFPxD1ARDDk" name="First Name" query="first_name" />
+		<attribute uid="Bser3oRqSo5" name="Last Name" query="last_name"/>
+		<attribute uid="mOVTQEMTcuX" name="Opt Out" query="optOut" />
+		<attribute uid="uDwrwWiQhEo" name="Openmrs Id Number" query="id"/>
+	</attributes>
+	
+	<programs>
+		<program uid="qo4PJmkAfof" name="patient information">
+			<query>
+				SELECT p.person_id as id, Date(p.date_created) as date
+				from openmrs.person p
+			</query>
+		</program>
+		<program uid="BUidBsubdIE" name="Vaccination: Measles Administered" >
+			<query>
+				SELECT p.person_id as id , Date(v.administration_date) as date
+				from openmrs.person p,openmrs.vac_vaccinations v
+				where p.person_id = v.patient_id
+				and v.vaccine_id = 14
+				and v.administered = 1
+				and v.location_id = :locationId
+			</query>
+		</program>
+	</programs>
+
+</trackerCapture>
+

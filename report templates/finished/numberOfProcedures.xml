@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="itemcounttot01" name="default"/>
+     </disaggregations>
+
+     <dataElementQuerys>
+		<dataElementQuery uid="test" prefix="procedure" codeprefix="procedurecode" disaggregation="itemcounttot01" >
+			<annotation>
+				SELECT c.concept_id,cn.name
+				FROM openmrs.concept c, openmrs.concept_class cc, openmrs.concept_name cn
+				where c.class_id = cc.concept_class_id
+				and c.concept_id = cn.concept_id
+				and cc.name = 'Surgeries'
+				and cn.concept_name_type = 'FULLY_SPECIFIED'
+			</annotation>	
+		</dataElementQuery>
+	 </dataElementQuerys>
+	 
+     <reportTemplate>
+	  <name>Number of Procedures</name>
+	  <uid>vfaGdIpV09z</uid>
+	  <code>procedures01</code>
+	  <periodType>Monthly</periodType>
+	  <metaDataValueTemplates>
+		<metaDataValueTemplate disaggregation="itemcounttot01">
+           <annotation>
+			Select count(*)
+			from openmrs.obs o
+			where o.concept_id = 1628
+			and o.value_coded = #metaDataId 
+			and o.location_id = :locationId
+			and o.voided = 0
+			and Date(o.obs_datetime) >= :startOfPeriod
+			and Date(o.obs_datetime) &lt;= :endOfPeriod	
+    	   </annotation>
+		</metaDataValueTemplate>
+	  </metaDataValueTemplates>
+    </reportTemplate>
+</reportTemplates>

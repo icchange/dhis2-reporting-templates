@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="bOQzfLe52IM" code="ref01" name="Referrals In" type="int"/>
+	   <dataElement uid="CMAgvPbay8S" code="ref02" name="Referrals Out" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="binNELAYYzV" attributeOptionCombo="SKniVEThyX6" code="reftotal01" name="default"/>
+	   <disaggregation uid="Ft3Rit8XwkS" attributeOptionCombo="SKniVEThyX6" code="AbY01" name="Above 5 Years"/>
+	   <disaggregation uid="iXHm3edyD0o" attributeOptionCombo="SKniVEThyX6" code="UnY01" name="Under 5 Years"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>Referrals Report</name>
+	  <uid>DYJtEok9HVN</uid>
+	  <code>reftotals01</code>
+	  <periodType>Daily</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="ref01" disaggregation="reftotal01">
+           <annotation>
+		   		SELECT count(*)
+				FROM openmrs.obs o, openmrs.person p 
+				where o.person_id = p.person_id 
+				and concept_id = 161257
+				and o.voided = 0
+				and o.comments like 'REFERloc%'
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and DATE(o.obs_datetime) &lt; :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+  	     <dataValueTemplate dataElement="ref02" disaggregation="reftotal01">
+           <annotation>
+		   		SELECT count(*) 
+				FROM openmrs.obs o, openmrs.person p 
+				where o.person_id = p.person_id 
+				and concept_id = 1272
+				and o.voided = 0
+				and o.comments like 'REFER_ref_loc%'
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and DATE(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+  	     <dataValueTemplate dataElement="ref01" disaggregation="AbY01">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.obs o, openmrs.person p 
+				where o.person_id = p.person_id 
+				and concept_id = 161257
+				and o.voided = 0
+				and o.comments like 'REFERloc%'
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and DATE(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="ref01" disaggregation="UnY01">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.obs o, openmrs.person p 
+				where o.person_id = p.person_id 
+				and concept_id = 161257
+				and o.voided = 0
+				and o.comments like 'REFERloc%'
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and DATE(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+  	     <dataValueTemplate dataElement="ref02" disaggregation="AbY01">
+           <annotation>
+				SELECT count(*) FROM openmrs.obs o, openmrs.person p 
+				where o.person_id = p.person_id 
+				and concept_id = 1272
+				and o.voided = 0
+				and o.comments like 'REFER_ref_loc%'
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and DATE(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+  	     <dataValueTemplate dataElement="ref02" disaggregation="UnY01">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.obs o, openmrs.person p 
+				where o.person_id = p.person_id 
+				and concept_id = 1272
+				and o.voided = 0
+				and o.comments like 'REFER_ref_loc%'
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and DATE(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>	
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>

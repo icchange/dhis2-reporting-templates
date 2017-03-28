@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="TkiUCXIb5Xj" code="waittime01" name="Wait Time" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="waittotal01" name="default"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>Wait Time</name>
+	  <uid>KgZ9maBtqQJ</uid>
+	  <code>wait01</code>
+	  <periodType>Daily</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="waittime01" disaggregation="waittotal01">
+           <annotation>
+				select IFNULL(AVG(t.tmsd),0) from (select TIMESTAMPDIFF(MINUTE,v.date_started,e.encounter_datetime) as tmsd
+				from openmrs.encounter e, openmrs.visit v
+				where e.visit_id = v.visit_id 
+				and e.encounter_id in (select s.encounter_id from (select e.encounter_id,min(e.encounter_datetime) as min from openmrs.encounter e group by e.visit_id) as s)
+				and e.voided = 0
+				and DATE(v.date_started) >= :startOfPeriod
+				and DATE(v.date_started) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+				) as t
+    	   </annotation>
+  	     </dataValueTemplate>
+	  </dataValueTemplates>
+     </reportTemplate>
+</reportTemplates>

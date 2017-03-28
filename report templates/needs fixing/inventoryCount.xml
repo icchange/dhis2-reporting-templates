@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="itemcounttot01" name="default"/>
+	   <disaggregation uid="wxnQNTc3OtW" attributeOptionCombo="SKniVEThyX6" code="itemcounttot02" name="Amount Expired"/>
+     </disaggregations>
+
+     <dataElementQuerys>
+		<dataElementQuery uid="test" prefix="item" codeprefix="itemcode" disaggregation="itemcounttot01" >
+			<annotation>
+				SELECT i.item_id,i.name 
+				FROM openmrs.inv_item i 
+				where i.location_id = :locationId
+				and i.retired = 0
+			</annotation>	
+		</dataElementQuery>
+	 </dataElementQuerys>
+	 
+     <reportTemplate>
+	  <name>Inventory</name>
+	  <uid>mIg53n2xaRz</uid>
+	  <code>inv01</code>
+	  <periodType>Monthly</periodType>
+	  <metaDataValueTemplates>
+		<metaDataValueTemplate disaggregation="itemcounttot01">
+           <annotation>
+			SELECT ifnull(ot.rt,0) + ct.quantity
+			from (
+			SELECT ifnull(sum(i.quantity),0) as quantity
+			FROM openmrs.inv_item_stock i,openmrs.inv_stockroom s
+			WHERE i.stockroom_id = s.stockroom_id
+			and s.location_id = :locationId
+			and i.item_id = #metaDataId
+			) as ct,(			
+			select sum(rt.total) as rt
+			From (			
+			SELECT t.item_id,t.date_created as d,sum(t.quantity),
+			(
+			select ifnull(sum(p.quantity),0) From 
+			(
+			select
+			t.date_created,sum(t.quantity) as quantity
+			FROM 
+			openmrs.inv_transaction t,openmrs.inv_stock_operation o,openmrs.inv_stockroom s
+			where t.operation_id = o.stock_operation_id
+			and t.stockroom_id = s.stockroom_id
+			and (o.status != 'CANCELLED' and o.status != 'pending')
+			and s.location_id = :locationId
+			and t.item_id = #metaDataId
+			group by t.date_created
+			order by t.date_created DESC
+			) as p
+			where p.date_created >= d
+			) as total
+			FROM 
+			openmrs.inv_transaction t,openmrs.inv_stock_operation o,openmrs.inv_stockroom s
+			where t.operation_id = o.stock_operation_id
+			and t.stockroom_id = s.stockroom_id
+			and (o.status != 'CANCELLED' and o.status != 'pending')
+			and s.location_id = :locationId
+			and t.item_id = #metaDataId
+			group by t.date_created
+			order by t.date_created DESC
+			) as rt
+			where rt.d > :endOfPeriod 
+			and :startOfPeriod = :startOfPeriod
+			) as ot	
+    	   </annotation>
+		</metaDataValueTemplate>
+		<metaDataValueTemplate disaggregation="itemcounttot02">
+           <annotation>
+			SELECT ifnull(ot.rt,0) + ct.quantity
+			from (
+			SELECT ifnull(sum(i.quantity),0) as quantity
+			FROM openmrs.inv_item_stock i,openmrs.inv_stockroom s
+			WHERE i.stockroom_id = s.stockroom_id
+			and s.location_id = :locationId
+			and i.item_id = #metaDataId
+			) as ct,(			
+			select sum(rt.total) as rt
+			From (			
+			SELECT t.item_id,t.date_created as d,sum(t.quantity),
+			(
+			select ifnull(sum(p.quantity),0) From 
+			(
+			select
+			t.date_created,sum(t.quantity) as quantity
+			FROM 
+			openmrs.inv_transaction t,openmrs.inv_stock_operation o,openmrs.inv_stockroom s
+			where t.operation_id = o.stock_operation_id
+			and t.stockroom_id = s.stockroom_id
+			and (o.status != 'CANCELLED' and o.status != 'pending')
+			and s.location_id = :locationId
+			and t.item_id = #metaDataId
+			group by t.date_created
+			order by t.date_created DESC
+			) as p
+			where p.date_created >= d
+			) as total
+			FROM 
+			openmrs.inv_transaction t,openmrs.inv_stock_operation o,openmrs.inv_stockroom s
+			where t.operation_id = o.stock_operation_id
+			and t.stockroom_id = s.stockroom_id
+			and (o.status != 'CANCELLED' and o.status != 'pending')
+			and s.location_id = :locationId
+			and t.item_id = #metaDataId
+			group by t.date_created
+			order by t.date_created DESC
+			) as rt
+			where rt.d > :endOfPeriod 
+			and :startOfPeriod = :startOfPeriod
+			) as ot	
+    	   </annotation>
+		</metaDataValueTemplate>
+	  </metaDataValueTemplates>
+    </reportTemplate>
+</reportTemplates>

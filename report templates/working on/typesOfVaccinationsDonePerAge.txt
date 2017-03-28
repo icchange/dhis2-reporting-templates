@@ -1,0 +1,324 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+<!-- Bacillus Calmette-Guerin (BCG), birth to 1yo -->
+<!-- Bacillus Calmette-Guerin (BCG), 52 weeks -->
+<!-- Bacillus Calmette-Guerin (BCG), NULL -->
+<!-- Oral Polio Vaccine (OPV), birth to 2 weeks -->
+<!-- Oral Polio Vaccine (OPV), 6 weeks -->
+<!-- Oral Polio Vaccine (OPV), 10 weeks -->
+<!-- Oral Polio Vaccine (OPV), 14 weeks -->
+<!-- Pentavalent Vaccine, 6 weeks -->
+<!-- Pentavalent Vaccine, 10 weeks -->
+<!-- Pentavalent Vaccine, 14 weeks -->
+<!-- Pneumococcal conjugate vaccine (PCV), 6 weeks -->
+<!-- Pneumococcal conjugate vaccine (PCV), 10 weeks -->
+<!-- Pneumococcal conjugate vaccine (PCV), 14 weeks -->
+<!-- Measles, 9 months -->
+<!-- Yellow Fever, 9 months -->
+<!-- Diphtheria-Pertussis-Tetanus (DPT), NULL -->
+<!-- Hepatitis A (HA), NULL -->
+<!-- Hepatitis B (HB), NULL -->
+<!-- Haemophilus influenza type b (Hib), NULL -->
+<!-- Rotavirus, NULL -->
+<!-- Rabies, NULL -->
+<!-- Chickenpox, NULL -->
+<!-- Cholera, NULL -->
+<!-- Typhoid, NULL -->
+<!-- Influenza, NULL -->
+<!-- Mumps, NULL -->
+<!-- Rubella, NULL -->
+<!-- Meningococcal, NULL -->
+<!-- Tetanus toxoid', NULL -->
+<!-- Vitamin A, 6 months -->
+<!-- Vitamin A, 1 year -->
+<!-- Vitamin A, 1 1/2 years -->
+<!-- Vitamin A, 2 years -->
+<!-- Vitamin A, 2 1/2 years -->
+<!-- Vitamin A, 3 years -->
+<!-- Vitamin A, 3 1/2 years -->
+<!-- Vitamin A, 4 years -->
+<!-- Vitamin A, 4 1/2 years -->
+<!-- Vitamin A, 5 years -->
+<!-- Deworming - Mebendazole, 1 year -->
+<!-- Deworming - Mebendazole, 1 1/2 years -->
+<!-- Deworming - Albendazole, 2 years -->
+<!-- Deworming - Albendazole, 2 1/2 years -->
+<!-- Deworming - Albendazole, 3 years -->
+<!-- Deworming - Albendazole, 3 1/2 years -->
+<!-- Deworming - Albendazole, 4 years -->
+<!-- Deworming - Albendazole, 4 1/2 years -->
+<!-- Deworming - Albendazole, 2 years -->
+<!-- Deworming - Albendazole, 2 1/2 years -->
+<!-- Custom, NULL -->
+	 
+	 <!-- Bacillus Calmette-Guerin (BCG) -->
+	 <!-- Oral Polio Vaccine (OPV) -->
+	 <!-- Pentavalent Vaccine -->
+	 <!-- Pneumococcal conjugate vaccine (PCV) -->	 
+	 <!-- Measles -->	 
+	 <!-- Yellow Fever -->
+	 <!-- Diphtheria-Pertussis-Tetanus (DPT) -->
+	 <!-- Hepatitis A (HA) -->
+	 <!-- Hepatitis B (HB) -->
+	 <!-- Haemophilus influenza type b (Hib) -->
+	 <!-- Rotavirus -->
+	 <!-- Rabies -->
+	 <!-- Chickenpox -->
+	 <!-- Cholera -->
+	 <!-- Typhoid -->
+	 <!-- Influenza -->
+	 <!-- Mumps -->
+	 <!-- Rubella -->
+	 <!-- Meningococcal -->
+	 <!-- Tetanus toxoid -->
+	 <!-- Vitamin A -->
+	 <!-- Deworming - Mebendazole -->
+	 <!-- Custom -->
+
+     <dataElements>
+	   <dataElement uid="" code="" name="Bacillus Calmette-Guerin (BCG)" type="int"/>
+	   <dataElement uid="" code="" name="Oral Polio Vaccine (OPV)" type="int"/>
+	   <dataElement uid="" code="" name="Pentavalent Vaccine" type="int"/>
+	   <dataElement uid="" code="" name="Measles" type="int"/>
+	   <dataElement uid="" code="" name="Yellow Fever" type="int"/>
+	   <dataElement uid="" code="" name="Diphtheria-Pertussis-Tetanus (DPT)" type="int"/>
+	   <dataElement uid="" code="" name="Hepatitis A (HA)" type="int"/>
+	   <dataElement uid="" code="" name="Hepatitis B (HB)" type="int"/>
+	   <dataElement uid="" code="" name="Haemophilus influenza type b (Hib)" type="int"/>
+	   <dataElement uid="" code="" name="Rotavirus" type="int"/>
+	   <dataElement uid="" code="" name="Rabies" type="int"/>
+	   <dataElement uid="" code="" name="Chickenpox" type="int"/>
+	   <dataElement uid="" code="" name="Cholera" type="int"/>
+	   <dataElement uid="" code="" name="Typhoid" type="int"/>
+	   <dataElement uid="" code="" name="Influenza" type="int"/>
+	   <dataElement uid="" code="" name="Mumps" type="int"/>
+	   <dataElement uid="" code="" name="Rubella" type="int"/>
+	   <dataElement uid="" code="" name="Meningococcal" type="int"/>
+	   <dataElement uid="" code="" name="Tetanus toxoid" type="int"/>
+	   <dataElement uid="" code="" name="Vitamin A" type="int"/>
+	   <dataElement uid="" code="" name="Deworming - Mebendazole" type="int"/>
+	   <dataElement uid="" code="" name="Custom" type="int"/>
+     </dataElements>
+
+	 <!-- birth to 2 weeks -->
+	 <!-- 6 weeks -->
+	 <!-- 10 weeks -->
+	 <!-- 14 weeks -->
+	 <!-- birth to 1yo -->
+	 <!-- older than 1yo -->
+	 <!-- 52 weeks -->
+	 <!-- 9 months -->
+	 <!-- 1 year -->
+	 <!-- 1 1/2 years -->
+	 <!-- 2 years -->
+	 <!-- 2 1/2 years -->
+	 <!-- 3 years -->
+	 <!-- 3 1/2 years -->
+	 <!-- 4 years -->
+	 <!-- 4 1/2 years -->
+	 <!-- 5 years -->
+	 <!-- 5 1/2 years -->
+	 
+	 <disaggregations>
+	   <disaggregation uid="" code="" name="0-1"/>
+	   <disaggregation uid="" code="" name="1-2"/>
+	   <disaggregation uid="" code="" name="2-3"/>
+	   <disaggregation uid="" code="" name="3-4"/>
+	   <disaggregation uid="" code="" name="4 0nward"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>death rate report</name>
+	  <uid>Tex4Yp5maO1</uid>
+	  <code>drr01</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Bacillus Calmette-Guerin (BCG)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 0
+				and s.vac_age &lt;= 2
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Bacillus Calmette-Guerin (BCG)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 51
+				and s.vac_age &lt;= 53
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Oral Polio Vaccine (OPV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 0
+				and s.vac_age &lt;= 2
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Oral Polio Vaccine (OPV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 5
+				and s.vac_age &lt;= 7
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Oral Polio Vaccine (OPV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 9
+				and s.vac_age &lt;= 11
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Oral Polio Vaccine (OPV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 13
+				and s.vac_age &lt;= 15
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Pentavalent Vaccine'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 5
+				and s.vac_age &lt;= 7
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Pentavalent Vaccine'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 9
+				and s.vac_age &lt;= 11
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Pentavalent Vaccine'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 13
+				and s.vac_age &lt;= 15
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Pneumococcal conjugate vaccine (PCV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 5
+				and s.vac_age &lt;= 7
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Pneumococcal conjugate vaccine (PCV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 9
+				and s.vac_age &lt;= 11
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="nod01" disaggregation="tot01">
+           <annotation>
+				select count(*)
+				from (select TIMESTAMPDIFF(WEEK,v.administration_date,pe.birthdate) as vac_age
+					from vac_vaccinations v,person p
+					where v.patient_id = p.person_id
+					and v.name = 'Pneumococcal conjugate vaccine (PCV)'
+					and v.location_id = :locationId) as s
+				where s.vac_age >= 13
+				and s.vac_age &lt;= 15
+    	   </annotation>
+  	     </dataValueTemplate>
+
+
+<!-- Measles, 9 months -->
+<!-- Yellow Fever, 9 months -->
+<!-- Diphtheria-Pertussis-Tetanus (DPT), NULL -->
+<!-- Hepatitis A (HA), NULL -->
+<!-- Hepatitis B (HB), NULL -->
+<!-- Haemophilus influenza type b (Hib), NULL -->
+<!-- Rotavirus, NULL -->
+<!-- Rabies, NULL -->
+<!-- Chickenpox, NULL -->
+<!-- Cholera, NULL -->
+<!-- Typhoid, NULL -->
+<!-- Influenza, NULL -->
+<!-- Mumps, NULL -->
+<!-- Rubella, NULL -->
+<!-- Meningococcal, NULL -->
+<!-- Tetanus toxoid', NULL -->
+<!-- Vitamin A, 6 months -->
+<!-- Vitamin A, 1 year -->
+<!-- Vitamin A, 1 1/2 years -->
+<!-- Vitamin A, 2 years -->
+<!-- Vitamin A, 2 1/2 years -->
+<!-- Vitamin A, 3 years -->
+<!-- Vitamin A, 3 1/2 years -->
+<!-- Vitamin A, 4 years -->
+<!-- Vitamin A, 4 1/2 years -->
+<!-- Vitamin A, 5 years -->
+<!-- Deworming - Mebendazole, 1 year -->
+<!-- Deworming - Mebendazole, 1 1/2 years -->
+<!-- Deworming - Albendazole, 2 years -->
+<!-- Deworming - Albendazole, 2 1/2 years -->
+<!-- Deworming - Albendazole, 3 years -->
+<!-- Deworming - Albendazole, 3 1/2 years -->
+<!-- Deworming - Albendazole, 4 years -->
+<!-- Deworming - Albendazole, 4 1/2 years -->
+<!-- Deworming - Albendazole, 2 years -->
+<!-- Deworming - Albendazole, 2 1/2 years -->
+<!-- Custom, NULL -->
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>

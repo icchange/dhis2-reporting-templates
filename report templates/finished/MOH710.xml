@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="Re5lACpKTvz" code="moh01" name="Adverse Events Following Immunization" type="int"/>
+	   <dataElement uid="txFRqHBg8qx" code="moh02" name="BCG" type="int"/>
+	   <dataElement uid="pnTDv5CgUHc" code="moh03" name="DPT+HIB+HEPB 1" type="int"/>
+	   <dataElement uid="v85wfZEaJzB" code="moh04" name="DPT+HIB+HEPB 2" type="int"/>
+	   <dataElement uid="z8rjEfnd4bB" code="moh05" name="DPT+HIB+HEPB 3" type="int"/>
+	   <dataElement uid="jIZ2BTGclo5" code="moh06" name="Fully Immunized Child (FIC)" type="int"/>
+	   <dataElement uid="Hp3LtPci5YV" code="moh07" name="IPV" type="int"/>
+	   <dataElement uid="pWbf3mw0Ygi" code="moh08" name="Measles 1" type="int"/>
+	   <dataElement uid="qmPUFQbE2IC" code="moh09" name="Measles 2" type="int"/>
+	   <dataElement uid="UFAT7DVLcaE" code="moh10" name="OPV (Birth dose)" type="int"/>
+	   <dataElement uid="lNFhpGsdeaB" code="moh11" name="OPV 1" type="int"/>
+	   <dataElement uid="ACnNYakXF72" code="moh12" name="OPV 2" type="int"/>
+	   <dataElement uid="Q0C3QxOz8uO" code="moh13" name="OPV 3" type="int"/>
+	   <dataElement uid="qmrk3dsuN31" code="moh14" name="Pneumococcal 1" type="int"/>
+	   <dataElement uid="cbuEuZiSD6R" code="moh15" name="Pneumococcal 2" type="int"/>
+	   <dataElement uid="ANk31vLoekk" code="moh16" name="Pneumococcal 3" type="int"/>
+	   <dataElement uid="cnftKP3ECMU" code="moh17" name="Rota 1" type="int"/>
+	   <dataElement uid="JPXKg3PZQ4h" code="moh18" name="Rota 2" type="int"/>
+	   <dataElement uid="OIv6CMud3Mw" code="moh19" name="Squint/White eye reflection" type="int"/>
+	   <dataElement uid="kaMKYbSjO1u" code="moh20" name="Tetanus Toxoid for pregnant women" type="int"/>
+	   <dataElement uid="HEPmw7fonzf" code="moh21" name="Vitamin A" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="mohtot01" name="default"/>
+	   <!-- disaggregation uid="O8p3wJvKNqq" code="mohtot02" name="Under-Above 1 Year" -->
+	   <disaggregation uid="n8komZBAuEx" attributeOptionCombo="SKniVEThyX6" code="mohtot02a" name="Under 1 Year"/>
+	   <disaggregation uid="QdDPu2gmo8f" attributeOptionCombo="SKniVEThyX6" code="mohtot02b" name="Above 1 Year"/>
+	   <disaggregation uid="P7gk12E4P2b" attributeOptionCombo="SKniVEThyX6" code="mohtot03" name="At 1 year"/>
+	   <disaggregation uid="fTHHICeyRHe" attributeOptionCombo="SKniVEThyX6" code="mohtot04" name="Within 2 weeks"/>
+	   <disaggregation uid="RrnykNVO2zD" attributeOptionCombo="SKniVEThyX6" code="mohtot05" name="Under 1 Year"/>
+	   <!-- disaggregation uid="JLmwN1455VJ" code="mohtot06" name="5 Doses" -->
+	   <disaggregation uid="T61jZiBtJf4" attributeOptionCombo="SKniVEThyX6" code="mohtot06a" name="1st Dose"/>
+	   <disaggregation uid="jjrhpT9q9Rl" attributeOptionCombo="SKniVEThyX6" code="mohtot06b" name="2nd Dose"/>
+	   <disaggregation uid="tF7yYUKobCS" attributeOptionCombo="SKniVEThyX6" code="mohtot06c" name="3rd Dose"/>
+	   <disaggregation uid="F72hiSvLMzL" attributeOptionCombo="SKniVEThyX6" code="mohtot06d" name="4th Dose"/>
+	   <disaggregation uid="hMtaYfT0Y6A" attributeOptionCombo="SKniVEThyX6" code="mohtot06e" name="5th Dose"/>
+	   <!-- disaggregation uid="Bf5Nz2Cosly" code="mohtot07" name="Vitamin A MOH710" -->
+	   <disaggregation uid="m8iMLFe8Mf2" attributeOptionCombo="SKniVEThyX6" code="mohtot07a" name="2 Years - 5 Years"/>
+	   <disaggregation uid="O2eCidL84pf" attributeOptionCombo="SKniVEThyX6" code="mohtot07b" name="At 1.5 Year"/>
+	   <disaggregation uid="Vcr95mFTNla" attributeOptionCombo="SKniVEThyX6" code="mohtot07c" name="At 1 Year"/>
+	   <disaggregation uid="QfgApJphC09" attributeOptionCombo="SKniVEThyX6" code="mohtot07d" name="At 6 Months"/>
+	   <disaggregation uid="tuQNObxDCFw" attributeOptionCombo="SKniVEThyX6" code="mohtot07e" name="Lactating Mothers"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>MOH710</name>
+	  <uid>fThloNgu0Lh</uid>
+	  <code>MOH710</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+  	     <!-- Adverse Events Following Immunization, default -->
+		 <dataValueTemplate dataElement="moh01" disaggregation="mohtot01">
+           <annotation>
+				select count(*)
+				from openmrs.vac_vaccinations v,openmrs.vac_adverse_reactions r
+				where v.vaccination_id = r.vaccination_id
+				and r.retired = 0
+				and v.administered = 1
+				and DATE(r.logged_date) >= :startOfPeriod
+				and DATE(r.logged_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- BCG, Under-Above 1 Year -->
+		 <dataValueTemplate dataElement="moh02" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE (v.vaccine_id = 1 or v.vaccine_id = 2)
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh02" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE (v.vaccine_id = 1 or v.vaccine_id = 2)
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- DPT+HIB+HEPB, Under-Above 1 Year -->
+		 <dataValueTemplate dataElement="moh03" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 8
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh03" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 8
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh04" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 9
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh04" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 9
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>	
+		 <dataValueTemplate dataElement="moh05" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 10
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh05" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 10
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>			 
+		 
+		 <!-- Fully Immunized Child (FIC), At 1 year -->
+		 <!-- todo still need to find out how this is captured -->
+		 <!--
+		 <dataValueTemplate dataElement="moh06" disaggregation="mohtot03">
+           <annotation>
+			
+				SELECT 0
+				where :startOfPeriod != :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 -->
+		 
+		 <!-- IPV, Under-Above 1 Year -->
+		 <!-- currently not in vaccination module -->
+		 <!--
+		 <dataValueTemplate dataElement="moh07" disaggregation="mohtot02a">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh07" disaggregation="mohtot02b">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 -->
+		 
+		 <!-- Measles, Under-Above 1 Year -->
+		 <dataValueTemplate dataElement="moh08" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 14
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh08" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 14
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- note measles 2 isnt being captured by module-->
+		 <!--
+		 <dataValueTemplate dataElement="moh09" disaggregation="mohtot02a">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh09" disaggregation="mohtot02b">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 -->
+		 
+		 <!-- opv (birth), within 2 weeks -->
+		 <dataValueTemplate dataElement="moh10" disaggregation="mohtot04">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 4 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+
+		 <!-- opv, Under-Above 1 Year -->
+		 <dataValueTemplate dataElement="moh11" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 5
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh11" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 5
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh12" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 6
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh12" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 6
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh13" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 7
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh13" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 7
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- Pneumococcal, Under-Above 1 Year -->
+		 <dataValueTemplate dataElement="moh14" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 11
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh14" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 11
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh15" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 12
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh15" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 12
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh16" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 13
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh16" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 13
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- Rota, Under-Above 1 Year-->
+		 <dataValueTemplate dataElement="moh17" disaggregation="mohtot02a">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 20
+				and 1 >= (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh17" disaggregation="mohtot02b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 20
+				and 1 &lt; (YEAR(v.administration_date) - YEAR(p.birthdate)) 
+				and v.patient_id = p.person_id
+				and v.retired = 0
+				and v.administered = 1
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- not capturing rota 2-->
+		 <!--
+		 <dataValueTemplate dataElement="moh18" disaggregation="mohtot02a">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh18" disaggregation="mohtot02b">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		-->
+			
+		 <!-- Squint/White eye reflection, Under 1 Year -->	
+		 <dataValueTemplate dataElement="moh19" disaggregation="mohtot02a">
+           <annotation>
+			SELECT count(*) 
+			from openmrs.obs o,openmrs.person p
+			where o.person_id = p.person_id
+			and o.concept_id = 162105
+			and o.value_coded = 135851
+			and o.voided = 0
+			and 1 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+			and DATE(o.obs_datetime) >= :startOfPeriod
+			and DATE(o.obs_datetime) &lt;= :endOfPeriod
+			and o.location_id = :locationId			
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- Tetanus Toxoid for pregnant women, 5 Doses-->
+		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06a">
+           <annotation>
+			SELECT count(*) 
+			from openmrs.obs o,openmrs.person p
+			where o.person_id = p.person_id
+			and o.concept_id = 160055
+			and o.value_numeric = 1
+			and o.voided = 0
+			and DATE(o.obs_datetime) >= :startOfPeriod
+			and DATE(o.obs_datetime) &lt;= :endOfPeriod
+			and o.location_id = :locationId	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06b">
+           <annotation>
+			SELECT count(*) 
+			from openmrs.obs o,openmrs.person p
+			where o.person_id = p.person_id
+			and o.concept_id = 160055
+			and o.value_numeric = 2
+			and o.voided = 0
+			and DATE(o.obs_datetime) >= :startOfPeriod
+			and DATE(o.obs_datetime) &lt;= :endOfPeriod
+			and o.location_id = :locationId	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06c">
+           <annotation>
+			SELECT count(*) 
+			from openmrs.obs o,openmrs.person p
+			where o.person_id = p.person_id
+			and o.concept_id = 160055
+			and o.value_numeric = 3
+			and o.voided = 0
+			and DATE(o.obs_datetime) >= :startOfPeriod
+			and DATE(o.obs_datetime) &lt;= :endOfPeriod
+			and o.location_id = :locationId	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06d">
+           <annotation>
+			SELECT count(*) 
+			from openmrs.obs o,openmrs.person p
+			where o.person_id = p.person_id
+			and o.concept_id = 160055
+			and o.value_numeric = 4
+			and o.voided = 0
+			and DATE(o.obs_datetime) >= :startOfPeriod
+			and DATE(o.obs_datetime) &lt;= :endOfPeriod
+			and o.location_id = :locationId	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06e">
+           <annotation>
+			SELECT count(*) 
+			from openmrs.obs o,openmrs.person p
+			where o.person_id = p.person_id
+			and o.concept_id = 160055
+			and o.value_numeric = 5
+			and o.voided = 0
+			and DATE(o.obs_datetime) >= :startOfPeriod
+			and DATE(o.obs_datetime) &lt;= :endOfPeriod
+			and o.location_id = :locationId	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- Vitamin A,   -->
+		 <!-- currently not being captured -->
+		 <!--
+		 <dataValueTemplate dataElement="moh21" disaggregation="mohtot07a">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh21" disaggregation="mohtot07b">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 32
+				and v.patient_id = p.person_id
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh21" disaggregation="mohtot07c">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 31
+				and v.patient_id = p.person_id
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh21" disaggregation="mohtot07d">
+           <annotation>
+				SELECT count(*) 
+				FROM openmrs.vac_vaccinations v,openmrs.person p
+				WHERE v.vaccine_id = 30
+				and v.patient_id = p.person_id
+				and DATE(v.administration_date) >= :startOfPeriod
+				and DATE(v.administration_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+				
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="moh21" disaggregation="mohtot07e">
+           <annotation>
+				SELECT 0
+    	   </annotation>
+  	     </dataValueTemplate>
+		 -->
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+</reportTemplates>

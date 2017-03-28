@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+
+	 <dataElements>
+	   <dataElement uid="" code="medset01" name="ANTIRETROVIRAL DRUGS" type="int"/>
+	   <dataElement uid="" code="medset02" name="TUBERCULOSIS TREATMENT DRUGS" type="int"/>
+	   <dataElement uid="" code="" name="other" type="int"/>
+     </dataElements>
+
+	 <dataElementQuerys>
+		<dataElementQuery uid="test" prefix="labtest" codeprefix="labtestcode" disaggregation="defaulttotal01" >
+			<annotation>
+				SELECT cn.concept_id,cn.name
+				FROM openmrs.concept_name cn,openmrs.concept c,openmrs.concept_class cc 
+				where cn.concept_id = c.concept_id 
+				and c.class_id = cc.concept_class_id
+				and cc.name in('medset')
+				and cn.concept_name_type = 'FULLY_SPECIFIED'
+				and cn.locale = 'en'
+  			</annotation>	
+		</dataElementQuery>
+	 </dataElementQuerys>
+	 
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="defaulttotal01" name="default"/>
+     </disaggregations>
+	 
+	 
+	 <!-- ANTIRETROVIRAL DRUGS 1085 -->
+	 <!-- TUBERCULOSIS TREATMENT DRUGS 1159 -->
+	 <!-- PNEUMOCYSTIC CARINII PNEUMONIA PROPHYLACTIC DRUGS 1157 -->
+	 <!-- TUBERCULOSIS PROPHYLACTIC DRUGS 1158 -->
+	 <!-- TRIPLE RX FOR HELICOBACTER 774 -->
+	 <!-- ANTIBIOTICS 1195-->
+	 <!-- ORAL CONTRACEPTION 780 -->
+	 <!-- VACCINATIONS 1197 -->
+	 <!-- AMPATH MED KIT 1245 -->
+	 <!-- Antipyretic Medications 1881 -->
+	 <!-- INJECTABLE CONTRACEPTIVES 5279 -->
+	 <!-- ANTIMALARIAL MEDICATIONS 5839 -->
+	 <!-- HERBAL TRADITIONAL MEDICATIONS 5841 -->
+	 <!-- MINERALS IRON SUPPLEMENTS 5843 -->
+	 <!-- Emergency contraceptive pills 160570 -->
+	 <!-- H2-receptor antagonists 161188 -->
+	<!--
+	select *
+	from openmrs.pharmacy_openmrs_orders oo
+	where oo.concept_id in(
+		Select cs.concept_id 
+		from openmrs.concept_set cs
+		where cs.concept_set = 1085
+	)
+	-->
+	  
+	 <dataElementQuerys>
+		<dataElementQuery prefix="drug" codeprefix="drugcode" disaggregation="defaulttotal01" >
+			<annotation>
+				<!-- SELECT c.concept_id,cn.name
+				FROM openmrs.concept c, openmrs.concept_class cc, openmrs.concept_name cn
+				where c.class_id = cc.concept_class_id
+				and c.concept_id = cn.concept_id
+				and c.retired = 0
+				and cc.name = 'DRUG'
+				and cn.locale = 'en'
+				and cn.concept_name_type = 'FULLY_SPECIFIED' -->
+				SELECT cn.concept_id,cn.name
+				FROM openmrs.concept_name cn,openmrs.concept c,openmrs.concept_class cc 
+				where cn.concept_id = c.concept_id 
+				and c.class_id = cc.concept_class_id
+				and cc.name in('medset')
+				and cn.concept_name_type = 'FULLY_SPECIFIED'
+				and cn.locale = 'en'
+			</annotation>	
+		</dataElementQuery>
+	 </dataElementQuerys>
+	 
+     <reportTemplate>
+	  <name>number of Prescriptions</name>
+	  <uid></uid>
+	  <code></code>
+	  <periodType>Monthly</periodType>
+	  <metaDataValueTemplates>
+		<metaDataValueTemplate disaggregation="defaulttotal01">
+           <annotation> 
+			Select count(*)
+			from openmrs.pharmacy_openmrs_orders ord
+		    where ord.concept_id in(
+					SELECT cs.concept_id
+					FROM openmrs.concept_set cs,openmrs.concept c
+					WHERE cs.concept_set = c.concept_id
+					and cs.concept_set = #metaDataId
+			)
+			and DATE(cbp.date_created) >= :startOfPeriod
+			and DATE(cbp.date_created) &lt; :endOfPeriod
+			<!-- note pharmacy doesnt seem to be location restricted thus we cant get location from this -->
+    	   </annotation>
+  	    </metaDataValueTemplate>
+	  </metaDataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>	
+

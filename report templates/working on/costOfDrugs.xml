@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+	   <dataElement uid="jOqoB8GCgB9" code="ic01" name="Items Count" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" code="itemcount01" name="default"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>Cost of Drugs</name>
+	  <uid></uid>
+	  <code></code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="ic01" disaggregation="itemcount01">
+           <annotation>
+				SELECT i.name,sum(sd.quantity) as sum
+				FROM openmrs.inv_item i, openmrs.inv_item_stock_detail sd
+				where i.item_id = sd.item_id
+				and sd.quantity > 0
+				and i.location_id = :locationId
+				group by i.item_id;
+				
+				
+				
+				
+				
+    	   </annotation>
+  	     </dataValueTemplate>
+	  </dataValueTemplates>
+     </reportTemplate>
+</reportTemplates>

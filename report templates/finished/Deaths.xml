@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="vJvKzAIqSDx" code="nod01" name="number of deaths" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="def01" name="default"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>death rate report</name>
+	  <uid>Tex4Yp5maO1</uid>
+	  <code>drr01</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+  	     <dataValueTemplate dataElement="nod01" disaggregation="def01">
+           <annotation>
+		       select count(distinct p.person_id)
+				from openmrs.person p
+				where p.dead = 1
+				and DATE(p.death_date) >= :startOfPeriod
+				and DATE(p.death_date) &lt;= :endOfPeriod
+				and (p.death_location = :locationId or ( :locationId = 1))
+    	   </annotation>
+  	     </dataValueTemplate>
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>
+

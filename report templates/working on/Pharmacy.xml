@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+	 <disaggregations>
+	   <disaggregation uid="DerB8TPmYI4" attributeOptionCombo="SKniVEThyX6" code="positivenegativecount01" name="positive/negative"/>
+	   <disaggregation uid="yrwsmzutQUq" attributeOptionCombo="SKniVEThyX6" code="positivecount01" name="positive"/>
+	   <disaggregation uid="edPVDRqdzw4" attributeOptionCombo="SKniVEThyX6" code="negativecount01" name="negative"/>
+	   <!-- todo -->
+	   <disaggregation uid="" attributeOptionCombo="SKniVEThyX6" code="lessthanmax01" name="lessthanmax"/>
+	   <!-- todo -->
+	   <disaggregation uid="Ip5T2MM1t1J" attributeOptionCombo="SKniVEThyX6" code="cost01" name="cost"/>
+     </disaggregations>
+
+     <dataElementQuerys>
+		<dataElementQuery uid="test" prefix="drug" codeprefix="drugcode" disaggregation="positivenegativecount01" >
+			<annotation>
+				SELECT d.drug_id,d.name
+				FROM openmrs.drug d
+				WHERE d.retired = 0
+			</annotation>	
+		</dataElementQuery>
+	 </dataElementQuerys>
+	 
+     <reportTemplate>
+	  <name>Pharmacy: Drug Ammount</name>
+	  <uid>dytMlq0eFFB</uid>
+	  <code>pharmacy01</code>
+	  <periodType>Monthly</periodType>
+	  <metaDataValueTemplates>
+		<metaDataValueTemplate disaggregation="positivecount01">
+           <annotation>
+			SELECT Ifnull(sum(isoi.quantity),0)
+			FROM openmrs.inv_stock_operation iso, openmrs.inv_stock_operation_item isoi, openmrs.inv_item ii
+			where iso.stock_operation_id = isoi.operation_id
+			and isoi.item_id = ii.item_id
+			and iso.status = 'COMPLETED'
+			and isoi.quantity > 0
+			and ii.drug_id = #metaDataId
+			and ii.location_id = :locationId
+			and Date(iso.operation_date) >= :startOfPeriod
+			and Date(iso.operation_date) &lt; :endOfPeriod	
+    	   </annotation>
+		</metaDataValueTemplate>
+		<metaDataValueTemplate disaggregation="negativecount01">
+           <annotation>
+			SELECT Ifnull(sum(isoi.quantity),0)
+			FROM openmrs.inv_stock_operation iso, openmrs.inv_stock_operation_item isoi, openmrs.inv_item ii
+			where iso.stock_operation_id = isoi.operation_id
+			and isoi.item_id = ii.item_id
+			and iso.status = 'COMPLETED'
+			and isoi.quantity &lt; 0
+			and ii.drug_id = #metaDataId
+			and ii.location_id = :locationId
+			and Date(iso.operation_date) >= :startOfPeriod
+			and Date(iso.operation_date) &lt; :endOfPeriod	
+    	   </annotation>
+		</metaDataValueTemplate>
+		<!--
+		<metaDataValueTemplate disaggregation="lessthanmax01">
+           <annotation>
+		   </annotation>
+		</metaDataValueTemplate>
+		-->
+		
+		<metaDataValueTemplate disaggregation="cost01">
+           <annotation>
+		   	SELECT sum(isoi.quantity*ifnull(ii.buying_price,0)) as cost
+			FROM openmrs.inv_stock_operation iso, openmrs.inv_stock_operation_item isoi, openmrs.inv_item ii
+			where iso.stock_operation_id = isoi.operation_id
+			and isoi.item_id = ii.item_id
+			and iso.status = 'COMPLETED'
+			and isoi.quantity > 0
+			and ii.drug_id = #metaDataId
+			and ii.location_id = :locationId
+			and Date(iso.operation_date) >= :startOfPeriod
+			and Date(iso.operation_date) &lt; :endOfPeriod	
+		   </annotation>
+		</metaDataValueTemplate>
+	  </metaDataValueTemplates>
+    </reportTemplate>
+</reportTemplates>

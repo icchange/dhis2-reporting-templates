@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+     <dataElements>
+	   <dataElement uid="MeZp4y6n38W" code="prog01" name="HIV Program" type="int"/> <!-- program_id:1 -->
+	   <dataElement uid="qCmWNy6uyUc" code="prog02" name="MDR program" type="int"/> <!-- program_id:2 -->
+	   
+	   <dataElement uid="wsvihzq5GiG" code="prog03" name="Maternity" type="int"/> <!-- program_id:4 -->
+	   <dataElement uid="uqpn4OqNray" code="prog04" name="TB Program" type="int"/> <!-- program_id:5 -->
+	   <dataElement uid="CEn0yvgqFml" code="prog05" name="Antenatal Care" type="int"/> <!-- program_id:6 -->
+	   <dataElement uid="oNIC3jryrLW" code="prog06" name="Child Health Program" type="int"/> <!-- program_id:7 -->
+	   <dataElement uid="H7PCrJci4VZ" code="prog07" name="Nutrition Program" type="int"/> <!-- program_id:8 -->
+	   <dataElement uid="GoaqFZTg19P" code="prog08" name="HIV Exposed" type="int"/> <!-- program_id:9 -->
+	   <dataElement uid="wMuz6R1b2ar" code="prog09" name="HIV Exposed Infant" type="int"/> <!-- program_id:10 -->
+	   <dataElement uid="BORm7DDjcRy" code="prog10" name="CWC" type="int"/> <!-- program_id:11 -->
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="OdAbW824w78" attributeOptionCombo="SKniVEThyX6" code="progtotal01" name="default"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>Program Attendence</name>
+	  <uid>Gb69LP6kNlO</uid>
+	  <code>proglist01</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+	  
+		 <!-- HIV Program -->
+  	     <dataValueTemplate dataElement="prog01" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 1
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- MDR program -->
+		 <dataValueTemplate dataElement="prog02" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 2
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Maternity -->
+		 <dataValueTemplate dataElement="prog03" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 4
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- TB Program -->
+		 <dataValueTemplate dataElement="prog04" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 5
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Antenatal Care -->
+		 <dataValueTemplate dataElement="prog05" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 6
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Child Health Program -->
+		 <dataValueTemplate dataElement="prog06" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 7
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Nutrition Program -->
+		 <dataValueTemplate dataElement="prog07" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 8
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- HIV Exposed -->
+		 <dataValueTemplate dataElement="prog08" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 9
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- HIV Exposed Infant-->
+		 <dataValueTemplate dataElement="prog09" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 10
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- CWC -->
+		 <dataValueTemplate dataElement="prog10" disaggregation="progtotal01">
+           <annotation>
+				select count(distinct pp.patient_id)
+				from openmrs.patient_program pp
+				where pp.program_id = 11
+				and pp.voided = 0
+				and DATE(pp.date_enrolled) >= :startOfPeriod
+				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
+				and pp.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>
+

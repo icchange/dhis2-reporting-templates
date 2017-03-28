@@ -1,0 +1,2045 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+
+	 <!-- 
+	 todo
+	 make sure that all positive queries point to the right elements
+ 	 -->
+	
+     <dataElements>
+		<!-- concept_ids: 9,887,160912 -->
+		<dataElement uid="MdlJStRqKR2" code="Labreport01" name="Blood Sugar" type="int"/>
+		<!-- concept_ids: 305 -->
+		<dataElement uid="UYExaG0Ccce" code="Labreport02" name="Brucella" type="int"/>
+		<!-- concept_ids: 5497,161717 -->
+		<dataElement uid="tSScjKM9Gw8" code="Labreport03" name="CD4" type="int"/>
+		<!-- concept_ids: 790,1011,5472,159661,159830,161134,161699 -->
+		<dataElement uid="hqrQA8KZzPP" code="Labreport04" name="Creatinine" type="int"/>
+		<!-- concept_ids: 161702 -->
+		<dataElement uid="zipPfeNZZEZ" code="Labreport05" name="Cryptococcal ag" type="int"/>
+		<!-- concept_ids: 855 -->
+		<dataElement uid="PaNo1DWeFCv" code="Labreport06" name="ESR" type="int"/>
+		<!-- concept_ids: 161692 -->
+		<dataElement uid="ugQPgycr38y" code="Labreport07" name="Full Haemogram" type="int"/>
+		<!-- concept_ids: 1367,161454,161689,161690 -->
+		<dataElement uid="MDxZlIuSTBQ" code="Labreport08" name="Gram Stain" type="int"/>
+		<!-- concept_ids: 161680 -->
+		<dataElement uid="XETnv2qqlzz" code="Labreport09" name="H.Pylori" type="int"/>
+		<!-- concept_ids: 21,161421 -->
+		<dataElement uid="HXSEvkDnTmr" code="Labreport10" name="Haemoglobin" type="int"/>
+		<!-- concept_ids: 1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700 -->
+		<dataElement uid="r0TL1ATV4Ib" code="Labreport11" name="Hepatitis - HBsAg" type="int"/> <!-- positive -->
+		<!-- todo -->
+		<dataElement uid="pzxTK8bhc1z" code="Labreport12" name="HIV/DCT/PITC" type="int"/> <!-- positive -->
+		<!-- concept_ids: 32,1643,161673,161714 -->
+		<dataElement uid="EIsaiEZQxAM" code="Labreport13" name="Malaria" type="int"/> <!-- positive and some more-->
+		<!-- concept_ids: 844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676 -->
+		<dataElement uid="PjZfzkq4YYk" code="Labreport14" name="PCR" type="int"/>
+		<!-- concept_ids: 45,1945,5477,161679 -->
+		<dataElement uid="N1CWLVjDTnM" code="Labreport15" name="Pregnancy Test" type="int"/>
+		<!-- concept_ids: 161470,161719 -->
+		<dataElement uid="QpBgv9VcdIS" code="Labreport16" name="Rheumatoid Factor" type="int"/>
+		<!-- concept_ids: 307,308 --> <!-- 159865,159866,159867,159868,159869,159870,161459,161460,161684 -->
+		<dataElement uid="Z0p7uJivPRO" code="Labreport17" name="SPUTUM/ AFB (TB)" type="int"/>
+		<!-- concept_ids: 53,304,1368,161447,161449,161450,161674,161675,161680,161688 -->
+		<dataElement uid="W9LG0Sob7ih" code="Labreport18" name="STOOL O/C" type="int"/>
+		<!-- concept_ids: 857,161696,161699,161718 -->
+		<dataElement uid="PRKgzgnYS3N" code="Labreport19" name="U/E" type="int"/>
+		<!-- concept_ids: 302 -->
+		<dataElement uid="g8LSAB2Jiuu" code="Labreport20" name="Urinalysis" type="int"/>
+		<!-- concept_ids: 299 --><!-- 1029,161686 -->
+		<dataElement uid="XqFe3ztTlzn" code="Labreport21" name="VDRL" type="int"/>
+		<!-- concept_ids: 856,1305,161716 -->
+		<dataElement uid="O0m5tkZVvuP" code="Labreport22" name="Viral Load" type="int"/>
+     </dataElements>
+
+	 <!-- positive\All Ages\Female -->
+	 <!-- total\All Ages\Female --> 
+	 <!-- positive\All Ages\Male -->
+	 <!-- total\All Ages\Male -->
+	 <!-- positive\Under 15\Female -->
+	 <!-- total\Under 15\Female --> 
+	 <!-- positive\Under 15\Male -->
+	 <!-- total\Under 15\Male -->
+	 <disaggregations>
+		<disaggregation uid="Gjv4NTIIChE" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation01a" name="All Ages\Female"/>
+		<disaggregation uid="KJW676hlDhH" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation01b" name="All Ages\Male"/>
+		<disaggregation uid="v1cCSOQUO6S" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation01c" name="Under 15\Female"/>
+		<disaggregation uid="MJVAixoc9fd" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation01d" name="Under 15\Male"/>	 
+	 
+	    <disaggregation uid="GkOx9wqtyUc" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02a" name="positive\All Ages\Female"/>
+	    <disaggregation uid="Heyk2dNjSgB" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02b" name="positive\All Ages\Male"/>
+	    <disaggregation uid="aHDGzI2RTIQ" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02c" name="total\All Ages\Female"/>
+	    <disaggregation uid="vfFXZy5lsWI" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02d" name="total\All Ages\Male"/>
+	    <disaggregation uid="NlbvERP2Ani" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02e" name="positive\Under 15\Female"/>
+	    <disaggregation uid="IXiiULiNAzl" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02f" name="positive\Under 15\Male"/>
+		<disaggregation uid="zHU3SIIU2f5" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02g" name="total\Under 15\Female"/>
+	    <disaggregation uid="Z3gD09a2o4Q" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation02h" name="total\Under 15\Male"/>
+	   
+	    <disaggregation uid="HoOkcK8QPBb" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03a" name="Positive: Pf/Pm/Pv/Po\All Ages\Female"/>
+	    <disaggregation uid="bygJcFzrqoa" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03b" name="Positive: Pf/Pm/Pv/Po\All Ages\Male"/>
+	    <disaggregation uid="hGrZuoX9HHz" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03c" name="total\All Ages\Female"/>
+	    <disaggregation uid="nIzpqw4gQkC" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03d" name="total\All Ages\Male"/>
+	    <disaggregation uid="eS0vm0tAamI" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03e" name="Positive: Pf/Pm/Pv/Po\Under 15\Female"/>
+	    <disaggregation uid="z0VNfK362Fj" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03f" name="Positive: Pf/Pm/Pv/Po\Under 15\Male"/>
+	    <disaggregation uid="ICsfr4dEWic" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03g" name="total\Under 15\Female"/>
+	    <disaggregation uid="FmWWEnZgpVO" attributeOptionCombo="SKniVEThyX6" code="labreportdisaggregation03h" name="total\Under 15\Male"/>
+     </disaggregations>
+	 
+     <reportTemplate>
+	  <name>Lab Report</name>
+	  <uid>mIg53n2xaRz</uid>
+	  <code>labreport01</code>
+	  <periodType>Daily</periodType>
+	  <dataValueTemplates>
+		 <!-- Blood Sugar -->
+  	     <dataValueTemplate dataElement="Labreport01" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(9,887,160912)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport01" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(9,887,160912)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport01" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(9,887,160912)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport01" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(9,887,160912)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Brucella -->
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport02" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(305)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- CD4 -->		 
+  	     <dataValueTemplate dataElement="Labreport03" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(5497,161717)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport03" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(5497,161717)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport03" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(5497,161717)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport03" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(5497,161717)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Creatinine -->
+		 <dataValueTemplate dataElement="Labreport04" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(790,1011,5472,159661,159830,161134,161699)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport04" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(790,1011,5472,159661,159830,161134,161699)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport04" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(790,1011,5472,159661,159830,161134,161699)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport04" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(790,1011,5472,159661,159830,161134,161699)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Cryptococcal ag -->
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_boolean = 1
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_boolean = 1
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_boolean = 1
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_boolean = 1
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport05" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161702)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- ESR -->
+		 <dataValueTemplate dataElement="Labreport06" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(855)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport06" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(855)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport06" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(855)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport06" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(855)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Full Haemogram -->
+		 <dataValueTemplate dataElement="Labreport07" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161692)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport07" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161692)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport07" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161692)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport07" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161692)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Gram Stain -->
+		 <dataValueTemplate dataElement="Labreport08" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1367,161454,161689,161690)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport08" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1367,161454,161689,161690)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport08" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1367,161454,161689,161690)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport08" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1367,161454,161689,161690)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- H.Pylori -->	 	 	 
+		 <dataValueTemplate dataElement="Labreport09" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161680)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport09" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161680)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport09" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161680)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport09" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161680)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Haemoglobin -->
+		 <dataValueTemplate dataElement="Labreport10" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(21,161421)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport10" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(21,161421)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport10" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(21,161421)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport10" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(21,161421)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Hepatitis - HBsAg --> 	
+ 	 	 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport11" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(1320,1321,1322,1323,1324,1325,159430,161234,161471,161472,161681,161682,161700)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- HIV/DCT/PITC -->	 
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport12" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(0)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		<!-- Malaria --> 
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport13" disaggregation="labreportdisaggregation03h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(32,1643,161673,161714)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- PCR -->
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport14" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(844,1030,1033,1034,1036,1038,1039,1043,1044,1046,159858,159859,160676)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Pregnancy Test -->	
+		 <dataValueTemplate dataElement="Labreport15" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(45,1945,5477,161679)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport15" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(45,1945,5477,161679)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport15" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(45,1945,5477,161679)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport15" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(45,1945,5477,161679)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>	 
+		 <!-- Rheumatoid Factor -->	 
+		 <dataValueTemplate dataElement="Labreport16" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161470,161719)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport16" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161470,161719)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport16" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161470,161719)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport16" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(161470,161719)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>	 
+		 <!-- SPUTUM/ AFB (TB) -->
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 703
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport17" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(307,308)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- STOOL O/C -->
+  	     <dataValueTemplate dataElement="Labreport18" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(53,304,1368,161447,161449,161450,161674,161675,161680,161688)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport18" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(53,304,1368,161447,161449,161450,161674,161675,161680,161688)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport18" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(53,304,1368,161447,161449,161450,161674,161675,161680,161688)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport18" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(53,304,1368,161447,161449,161450,161674,161675,161680,161688)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- U/E -->
+  	     <dataValueTemplate dataElement="Labreport19" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(857,161696,161699,161718)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport19" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(857,161696,161699,161718)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport19" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(857,161696,161699,161718)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport19" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(857,161696,161699,161718)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Urinalysis -->	
+		 <dataValueTemplate dataElement="Labreport20" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(302)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport20" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(302)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport20" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(302)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport20" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(302)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>	 
+		 <!-- VDRL -->
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02a">
+           <annotation>
+		    select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02c">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02d">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02e">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'F'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02f">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p,openmrs.obs o
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and o.obs_id = ltr.obs_id
+			and p.gender = 'M'
+			and o.value_coded = 1228
+			and lts.status in('Approved')
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02g">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport21" disaggregation="labreportdisaggregation02h">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(299)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod	
+    	   </annotation>
+  	     </dataValueTemplate>	 
+		 <!-- Viral Load -->	
+		 <dataValueTemplate dataElement="Labreport22" disaggregation="labreportdisaggregation01a">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(856,1305,161716)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport22" disaggregation="labreportdisaggregation01b">
+           <annotation>
+		   	select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(856,1305,161716)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport22" disaggregation="labreportdisaggregation01c">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(856,1305,161716)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'F'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="Labreport22" disaggregation="labreportdisaggregation01d">
+           <annotation>
+			select count(*)
+			from openmrs.laboratory_test lt, openmrs.laboratory_test_result ltr, openmrs.laboratory_test_result_status_log lts, openmrs.person p
+			where lt.lab_test_concept_id in(856,1305,161716)
+			and lt.laboratory_test_id = ltr.laboratory_test_id
+			and ltr.laboratory_test_result_id = lts.laboratory_test_result_id
+			and lt.patient_id = p.person_id
+			and 15 >= (YEAR(lt.date_created) - YEAR(p.birthdate)) 
+			and p.gender = 'M'
+			and lts.status in('Approved')
+			and lt.lab_location_id = :locationId
+			and Date(lt.date_created) >= :startOfPeriod
+			and Date(lt.date_created) &lt;= :endOfPeriod		   
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 
+	  </dataValueTemplates>
+	 </reportTemplate>
+	 
+</reportTemplates>

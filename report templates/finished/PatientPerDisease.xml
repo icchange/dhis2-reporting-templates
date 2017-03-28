@@ -1,0 +1,1757 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+     
+	 <!-- Brucellosis (Reportable) 161742 -->
+	 <!-- Burns (Reportable) 161743 -->
+	 <!-- Cholera (Reportable) 161745 -->
+	 <!-- Dracunculosis (Reportable) 161752 -->
+	 <!-- Aneamia (Reportable) 161739 -->
+	 <!-- Dysentery (Reportable) 161753 -->
+	 <!-- Malnutrition (Reportable) 161761 -->
+	 <!-- Bilharzia (Reportable) 161740 -->
+	 <!-- Measles (Reportable) 161762 -->
+	 <!-- Epilepsy (Reportable) 161755 -->
+	 
+	 <!-- Diabetes (Reportable) 161748 -->
+	 <!-- Diarrhoea (Reportable) 161749 -->
+	 <!-- Hypertension (Reportable) 161757 -->
+	 <!-- Tetanus (Reportable) 161774 -->
+	 <!-- Plague (Reportable) 161767 -->
+	 <!-- Tuberculosis (Reportable) 161775 -->
+	 <!-- Malaria (Reportable) 161759 -->
+	 <!-- Abortion (Reportable) 161723 -->
+	 <!-- Pneumonia (Reportable) 161768 -->
+	 <!-- Poisoning (Reportable) 161769 -->
+	 
+	 <!-- Other (Reportable) 161780 -->
+	 <!-- Chicken Pox (Reportable) 161744 -->
+	 <!-- Confirmed Malaria (Reportable) 161746 -->
+	 <!-- Ear Infections (Reportable) 161754 -->
+	 <!-- Dental Disorders (Reportable) 161747 -->
+	 <!-- Meningococcal Meningitis (Reportable) 161763 -->
+	 <!-- Mental Disorders (Reportable) 161764 -->
+	 <!-- Sexual Assault (Reportable) 161772 -->
+	 <!-- Eye Infections (Reportable) 161756 -->
+	 <!-- Infectious Hepatitis (Reportable) 161758 -->
+
+	 <!-- Typhoid fever (Reportable) 161776 -->
+	 <!-- Poliomyelitis (AFP) (Reportable) 161770 -->
+	 <!-- Yellow Fever (Reportable) 161779 -->
+	 <!-- Clinical Malaria (Reportable) 162007 -->
+	 <!-- Bites - Animal/Snake (Reportable) 161741 -->
+	 <!-- Rheumatism/Joint Pains (Reportable) 161771 -->
+	 <!-- New AIDS Cases (Reportable) 161765 -->
+	 <!-- Sexually Transmitted Infections (Reportable) 161773 -->
+	 <!-- Accidents - Fractures/Injuries (Reportable) 161724 -->
+	 <!-- Malaria in pregnancy (Reportable) 161760 -->
+	 
+	 <!-- Urinary Tract Infection (Reportable) 161777 -->
+	 <!-- Viral Haemorrhagic Fever (Reportable) 161778 -->
+	 <!-- Dis. of Puerperium & Childbirth (Reportable) 161750 -->
+	 <!-- Other Dis. of Respiratory System (Reportable) 161766 -->
+	 <!-- Dis. of the skin (incl. wounds) (Reportable) 161751 -->
+	 <!-- Natural Death Reportable to Medicolegal Authority 133480 -->
+	 
+     <dataElements>
+	    <dataElement uid="fy9ECooGA8V" code="reportable001" name="Brucellosis" type="int"/>
+		<dataElement uid="oFZ4V5k5qTw" code="reportable002" name="Burns" type="int"/>
+		<dataElement uid="cMe5FDa18LB" code="reportable003" name="Cholera" type="int"/>
+		<dataElement uid="nn7aoo47Idq" code="reportable004" name="Dracunculosis" type="int"/>
+		<dataElement uid="l9D4luGFsrY" code="reportable005" name="Aneamia" type="int"/>
+		<dataElement uid="btJLHobrZ51" code="reportable006" name="Dysentery" type="int"/>
+		<dataElement uid="iwpWYYQrwgZ" code="reportable007" name="Malnutrition" type="int"/>
+		<dataElement uid="fDDvLdSxE2n" code="reportable008" name="Bilharzia" type="int"/>
+		<dataElement uid="FkjyWVUgLiv" code="reportable009" name="Measles" type="int"/>
+		<dataElement uid="hT03IXutnVV" code="reportable010" name="Epilepsy" type="int"/>
+	 
+		<dataElement uid="NwHyE3I2Zdl" code="reportable011" name="Diabetes" type="int"/>
+		<dataElement uid="h4HVOf1I57H" code="reportable012" name="Diarrhoea" type="int"/>
+		<dataElement uid="Hi4kWJskImj" code="reportable013" name="Hypertension" type="int"/>
+		<dataElement uid="WF54K0q894X" code="reportable014" name="Tetanus" type="int"/>
+		<dataElement uid="iaGlfmxDQWn" code="reportable015" name="Plague" type="int"/>
+		<dataElement uid="S33bdTuD48m" code="reportable016" name="Tuberculosis" type="int"/>
+		<dataElement uid="fVmNxQ2jLoI" code="reportable017" name="Malaria" type="int"/>
+		<dataElement uid="e5OivmnidPE" code="reportable018" name="Abortion" type="int"/>
+		<dataElement uid="vkFLgKdnDAw" code="reportable019" name="Pneumonia" type="int"/>
+		<dataElement uid="ZMBfU93JimL" code="reportable020" name="Poisoning" type="int"/>
+	 
+		<dataElement uid="XWoK1iIbP5Q" code="reportable021" name="Other" type="int"/>
+		<dataElement uid="jpMqQrz2BgN" code="reportable022" name="Chicken Pox" type="int"/>
+		<dataElement uid="OLearM1fPDb" code="reportable023" name="Confirmed Malaria" type="int"/>
+		<dataElement uid="XGQ5fmFR8r0" code="reportable024" name="Ear Infections" type="int"/>
+		<dataElement uid="E08ID8h1HuJ" code="reportable025" name="Dental Disorders" type="int"/>
+		<dataElement uid="a0tYQuJxKfC" code="reportable026" name="Meningococcal Meningitis" type="int"/>
+		<dataElement uid="Xs6XAtUiwZt" code="reportable027" name="Mental Disorders" type="int"/>
+		<dataElement uid="e2oM54bBvGY" code="reportable028" name="Sexual Assault" type="int"/>
+		<dataElement uid="T5Pio9WXeC8" code="reportable029" name="Eye Infections" type="int"/>
+		<dataElement uid="uldfQDAbMch" code="reportable030" name="Infectious Hepatitis" type="int"/>
+
+		<dataElement uid="zpZdPiaPkxM" code="reportable031" name="Typhoid fever" type="int"/>
+		<dataElement uid="D1nqLKdxXLM" code="reportable032" name="Poliomyelitis (AFP)" type="int"/>
+		<dataElement uid="nGXLzjxa8Mc" code="reportable033" name="Yellow Fever" type="int"/>
+		<dataElement uid="juzEvF5OBzI" code="reportable034" name="Clinical Malaria" type="int"/>
+		<dataElement uid="w7qLcgiXcKD" code="reportable035" name="Bites - Animal/Snake" type="int"/>
+		<dataElement uid="K48vAh6GldU" code="reportable036" name="Rheumatism/Joint Pains" type="int"/>
+		<dataElement uid="R0cbfnXUdTS" code="reportable037" name="New AIDS Cases" type="int"/>
+		<dataElement uid="W0DIxnINxKe" code="reportable038" name="Sexually Transmitted Infections" type="int"/>
+		<dataElement uid="UyUdkCIlEJb" code="reportable039" name="Accidents - Fractures/Injuries" type="int"/>
+		<dataElement uid="jBAS30LFE0r" code="reportable040" name="Malaria in pregnancy" type="int"/>
+	 
+		<dataElement uid="u7YSIAqyW54" code="reportable041" name="Urinary Tract Infection" type="int"/>
+		<dataElement uid="pfyydr72NTT" code="reportable042" name="Viral Haemorrhagic Fever" type="int"/>
+		<dataElement uid="Z3VYTM6CsUg" code="reportable043" name="Dis. of Puerperium &amp; Childbirth" type="int"/>
+		<dataElement uid="lxNz2mQWHQ7" code="reportable044" name="Other Dis. of Respiratory System" type="int"/>
+		<dataElement uid="HckBNcvUo0K" code="reportable045" name="Dis. of the skin (incl. wounds)" type="int"/>
+		<dataElement uid="VxUOeKZLzSG" code="reportable046" name="Natural Death Reportable to Medicolegal Authority" type="int"/>
+     </dataElements>
+
+	 <disaggregations>
+	   <!-- <disaggregation uid="kIHaYYnByBT" code="tot02" name="total"/> -->
+	   <disaggregation uid="binNELAYYzV" attributeOptionCombo="SKniVEThyX6" code="tot02" name="total"/>
+	   <disaggregation uid="Ft3Rit8XwkS" attributeOptionCombo="SKniVEThyX6" code="AbY01" name="Above 5 Years"/>
+	   <disaggregation uid="iXHm3edyD0o" attributeOptionCombo="SKniVEThyX6" code="UnY01" name="Under 5 Years"/>
+     </disaggregations>
+	 
+     <reportTemplate>
+	  <name>Patients per Disease</name>
+	  <uid>Dwkl1vLRskI</uid>
+	  <code>Disease01</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+	  
+		<!-- patients per disease analytic -->
+	  
+		 <!-- Brucellosis (Reportable) 161742 -->
+  	     <dataValueTemplate dataElement="reportable001" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161742
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Burns (Reportable) 161743 -->
+		 <dataValueTemplate dataElement="reportable002" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161743
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Cholera (Reportable) 161745 -->
+  	     <dataValueTemplate dataElement="reportable003" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161745
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Dracunculosis (Reportable) 161752 -->
+		 <dataValueTemplate dataElement="reportable004" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161752
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Aneamia (Reportable) 161739 -->
+		 <dataValueTemplate dataElement="reportable005" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161739
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Dysentery (Reportable) 161753 -->
+	 	 <dataValueTemplate dataElement="reportable006" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161753
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Malnutrition (Reportable) 161761 -->
+	 	 <dataValueTemplate dataElement="reportable007" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161761
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Bilharzia (Reportable) 161740 -->
+	 	 <dataValueTemplate dataElement="reportable008" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161740
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Measles (Reportable) 161762 -->
+	 	 <dataValueTemplate dataElement="reportable009" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161762
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Epilepsy (Reportable) 161755 -->
+		 <dataValueTemplate dataElement="reportable010" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161755
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- Diabetes (Reportable) 161748 -->
+		 <dataValueTemplate dataElement="reportable011" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161748
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Diarrhoea (Reportable) 161749 -->
+	 		 <dataValueTemplate dataElement="reportable012" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161749
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Hypertension (Reportable) 161757 -->
+	 		 <dataValueTemplate dataElement="reportable013" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161757
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Tetanus (Reportable) 161774 -->
+	 		 <dataValueTemplate dataElement="reportable014" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161774
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Plague (Reportable) 161767 -->
+	 	 <dataValueTemplate dataElement="reportable015" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161767
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Tuberculosis (Reportable) 161775 -->
+	 	 <dataValueTemplate dataElement="reportable016" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161775
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Malaria (Reportable) 161759 -->
+	 		 <dataValueTemplate dataElement="reportable017" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161759
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Abortion (Reportable) 161723 -->
+	 		 <dataValueTemplate dataElement="reportable018" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161723
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Pneumonia (Reportable) 161768 -->
+	 		 <dataValueTemplate dataElement="reportable019" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161768
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Poisoning (Reportable) 161769 -->
+	 		 <dataValueTemplate dataElement="reportable020" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161769
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Other (Reportable) 161780 -->
+	 		 <dataValueTemplate dataElement="reportable021" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161780
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Chicken Pox (Reportable) 161744 -->
+	 		 <dataValueTemplate dataElement="reportable022" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161744
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Confirmed Malaria (Reportable) 161746 -->
+	 		 <dataValueTemplate dataElement="reportable023" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161746
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Ear Infections (Reportable) 161754 -->
+	 		 <dataValueTemplate dataElement="reportable024" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161754
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Dental Disorders (Reportable) 161747 -->
+	 		 <dataValueTemplate dataElement="reportable025" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161747
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Meningococcal Meningitis (Reportable) 161763 -->
+	 		 <dataValueTemplate dataElement="reportable026" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161763
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Mental Disorders (Reportable) 161764 -->
+	 		 <dataValueTemplate dataElement="reportable027" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161764
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	     <!-- Sexual Assault (Reportable) 161772 -->
+		 <dataValueTemplate dataElement="reportable028" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161772
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	     <!-- Eye Infections (Reportable) 161756 -->
+	 	 <dataValueTemplate dataElement="reportable029" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161756
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Infectious Hepatitis (Reportable) 161758 -->
+		 <dataValueTemplate dataElement="reportable030" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161758
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Typhoid fever (Reportable) 161776 -->
+	 		 <dataValueTemplate dataElement="reportable031" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161776
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Poliomyelitis (AFP) (Reportable) 161770 -->
+	 		 <dataValueTemplate dataElement="reportable032" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161770
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Yellow Fever (Reportable) 161779 -->
+	 		 <dataValueTemplate dataElement="reportable033" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161779
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Clinical Malaria (Reportable) 162007 -->
+	 		 <dataValueTemplate dataElement="reportable034" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 162007
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Bites - Animal/Snake (Reportable) 161741 -->
+	 		 <dataValueTemplate dataElement="reportable035" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161741
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Rheumatism/Joint Pains (Reportable) 161771 -->
+	 		 <dataValueTemplate dataElement="reportable036" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161771
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- New AIDS Cases (Reportable) 161765 -->
+	 		 <dataValueTemplate dataElement="reportable037" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161765
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Sexually Transmitted Infections (Reportable) 161773 -->
+	 		 <dataValueTemplate dataElement="reportable038" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161773
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Accidents - Fractures/Injuries (Reportable) 161724 -->
+	 		 <dataValueTemplate dataElement="reportable039" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161724
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Malaria in pregnancy (Reportable) 161760 -->
+	 		 <dataValueTemplate dataElement="reportable040" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161760
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Urinary Tract Infection (Reportable) 161777 -->
+	 		 <dataValueTemplate dataElement="reportable041" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161777
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Viral Haemorrhagic Fever (Reportable) 161778 -->
+	 		 <dataValueTemplate dataElement="reportable042" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161778
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Dis. of Puerperium & Childbirth (Reportable) 161750 -->
+	 		 <dataValueTemplate dataElement="reportable043" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161750
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Other Dis. of Respiratory System (Reportable) 161766 -->
+	 		 <dataValueTemplate dataElement="reportable044" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161766
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	 <!-- Dis. of the skin (incl. wounds) (Reportable) 161751 -->
+	 		 <dataValueTemplate dataElement="reportable045" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 161751
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Natural Death Reportable to Medicolegal Authority 133480 -->
+	 	 <dataValueTemplate dataElement="reportable046" disaggregation="tot02">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and o.value_coded = 133480
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+			
+		
+	   	 <!-- Diarrhoea (Reportable) 161749 -->
+		 <dataValueTemplate dataElement="reportable012" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161749
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable012" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161749
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Tuberculosis (Reportable) 161775 -->
+		 <dataValueTemplate dataElement="reportable016" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161775
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable016" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161775
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Dysentery (Reportable) 161753 -->
+		 <dataValueTemplate dataElement="reportable006" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161753
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable006" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161753
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Cholera (Reportable) 161745 -->
+		 <dataValueTemplate dataElement="reportable003" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161745
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable003" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161745
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Meningococcal Meningitis (Reportable) 161763 -->
+		 <dataValueTemplate dataElement="reportable026" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161763
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable026" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161763
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Tetanus (Reportable) 161774 -->
+		 <dataValueTemplate dataElement="reportable014" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161774
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable014" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161774
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Poliomyelitis (AFP) (Reportable) 161770 -->
+		 <dataValueTemplate dataElement="reportable032" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161770
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable032" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161770
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Chicken Pox (Reportable) 161744 -->
+		 <dataValueTemplate dataElement="reportable022" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161744
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable022" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161744
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		
+		 <!-- Measles (Reportable) 161762 -->
+		 <dataValueTemplate dataElement="reportable009" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161762
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable009" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161762
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Infectious Hepatitis (Reportable) 161758 -->
+		 <dataValueTemplate dataElement="reportable030" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161758
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable030" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161758
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Clinical Malaria (Reportable) 162007 -->
+		 <dataValueTemplate dataElement="reportable034" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 162007
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable034" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 162007
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Confirmed Malaria (Reportable) 161746 -->
+		 <dataValueTemplate dataElement="reportable023" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161746
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable023" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161746
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Urinary Tract Infection (Reportable) 161777 -->
+		 <dataValueTemplate dataElement="reportable041" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161777
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable041" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161777
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Typhoid fever (Reportable) 161776 -->
+		 <dataValueTemplate dataElement="reportable031" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161776
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable031" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161776
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Bilharzia (Reportable) 161740 -->
+		 <dataValueTemplate dataElement="reportable008" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161740
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable008" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161740
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Malnutrition (Reportable) 161761 -->
+		 <dataValueTemplate dataElement="reportable007" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161761
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable007" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161761
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Aneamia (Reportable) 161739 -->
+		 <dataValueTemplate dataElement="reportable005" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161739
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable005" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161739
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Eye Infections (Reportable) 161756 -->
+		 <dataValueTemplate dataElement="reportable029" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161756
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable029" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161756
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Ear Infections (Reportable) 161754 -->
+		 <dataValueTemplate dataElement="reportable024" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161754
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable024" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161754
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Other Dis. of Respiratory System (Reportable) 161766 -->
+		 <dataValueTemplate dataElement="reportable044" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161766
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable044" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161766
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Pneumonia (Reportable) 161768 -->
+		 <dataValueTemplate dataElement="reportable019" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161768
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable019" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161768
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Mental Disorders (Reportable) 161764 -->
+		 <dataValueTemplate dataElement="reportable027" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161764
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable027" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161764
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Dental Disorders (Reportable) 161747 -->
+		 <dataValueTemplate dataElement="reportable025" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161747
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable025" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161747
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Dis. of the skin (incl. wounds) (Reportable) 161751 -->
+         <dataValueTemplate dataElement="reportable045" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161751
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable045" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161751
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Poisoning (Reportable) 161769 -->
+		 <dataValueTemplate dataElement="reportable020" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161769
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable020" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161769
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Accidents - Fractures/Injuries (Reportable) 161724 -->
+		 <dataValueTemplate dataElement="reportable039" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161724
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable039" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161724
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Sexual Assault (Reportable) 161772 -->
+		 <dataValueTemplate dataElement="reportable028" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161772
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable028" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161772
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Burns (Reportable) 161743 -->
+		 <dataValueTemplate dataElement="reportable028" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161743
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable028" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161743
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Bites - Animal/Snake (Reportable) 161741 -->
+		 <dataValueTemplate dataElement="reportable035" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161741
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable035" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161741
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Diabetes (Reportable) 161748 -->
+		 <dataValueTemplate dataElement="reportable011" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161748
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable011" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161748
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Epilepsy (Reportable) 161755 -->
+		 <dataValueTemplate dataElement="reportable010" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161755
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable010" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161755
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Dracunculosis (Reportable) 161752 -->
+		 <dataValueTemplate dataElement="reportable004" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161752
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable004" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161752
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Yellow Fever (Reportable) 161779 -->
+		 <dataValueTemplate dataElement="reportable033" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161779
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable033" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161779
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Viral Haemorrhagic Fever (Reportable) 161778 -->
+		 <dataValueTemplate dataElement="reportable042" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161778
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable042" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161778
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+	  	 <!-- New AIDS Cases (Reportable) 161765 -->
+		 <dataValueTemplate dataElement="reportable037" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161765
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable037" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161765
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>		 
+		 <!-- Plague (Reportable) 161767 -->
+		 <dataValueTemplate dataElement="reportable015" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161767
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable015" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161767
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Brucellosis (Reportable) 161742 -->
+  	     <dataValueTemplate dataElement="reportable001" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161742
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable001" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161742
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Other (Reportable) 161780 -->
+  	     <dataValueTemplate dataElement="reportable021" disaggregation="AbY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161780
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="reportable021" disaggregation="UnY01">
+           <annotation>
+				select count(distinct p.person_id)
+				from openmrs.person p, openmrs.obs o
+				where p.voided = 0 and o.voided = 0
+				and o.person_id = p.person_id
+				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and o.value_coded = 161780
+				and Date(o.obs_datetime) >= :startOfPeriod
+				and Date(o.obs_datetime) &lt;= :endOfPeriod
+				and o.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+
+     <dataElements>
+	   <dataElement uid="" code="moh105-01" name="Number of WRA receiving FP commodities" type="int"/>
+	   <dataElement uid="" code="moh105-02" name="Number of women attending at least 4 ANC visits" type="int"/>
+	   <dataElement uid="" code="moh105-03" name="Number of deliveries conducted by skilled health attendents in health facilities" type="int"/>
+	   <dataElement uid="" code="moh105-03b" name="Number of live births" type="int"/>
+	   <dataElement uid="" code="moh105-04" name="Number of newborns with low birth weight (LBW)" type="int"/>
+	   <dataElement uid="" code="moh105-05" name="Number of HIV positive women receiving preventative ARVs treatment(PMTCT)" type="int"/>
+	   <dataElement uid="" code="moh105-06" name="Number of LLITN distributed to pregnent women" type="int"/>
+	   <dataElement uid="" code="moh105-07" name="Number of pregnent women receiving IPT2" type="int"/>
+	   <dataElement uid="" code="moh105-08" name="Number of HFs providing basic obstetric emergency care (BOEC)" type="int"/>
+	   <dataElement uid="" code="moh105-09" name="Number of HFs providing comprehensive obstetric emergency care (COEC)" type="int"/>
+	   <dataElement uid="" code="moh105-10" name="Number of maternal deaths occuring at health facility" type="int"/>
+	   <dataElement uid="" code="moh105-11" name="Number of maternal deaths audited" type="int"/>
+
+	   <dataElement uid="" code="moh105-12" name="Number of children under one year vaccinated against measles" type="int"/>
+	   <dataElement uid="" code="moh105-13" name="Number of children fully immunised" type="int"/>
+	   <dataElement uid="" code="moh105-14" name="Number of number of newborns receiving BCG" type="int"/>
+	   <dataElement uid="" code="moh105-15" name="Number of underweights among under five attending cwc" type="int"/>
+	   
+	   <dataElement uid="" code="moh105-16" name="Number of children under five attending growth monitoring clinic (new visit)" type="int"/>
+	   <dataElement uid="" code="moh105-17" name="Number of children under five receiving vitamin A" type="int"/>
+	   <dataElement uid="" code="moh105-18" name="Number of LLITNs distributed to children under 5 years" type="int"/>
+	   <dataElement uid="" code="moh105-19" name="Number of under five years treated for malaria" type="int"/>
+	   
+	   
+	   
+	   
+	   
+     </dataElements>
+
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" code="moh105-01" name="default"/>
+	   <disaggregation uid="n8komZBAuEx" code="moh105-02" name="target"/>
+	   <disaggregation uid="n8komZBAuEx" code="moh105-03" name="baseline"/>
+	   <disaggregation uid="QdDPu2gmo8f" code="moh105-04" name="Eligible POPn"/>
+     </disaggregations>
+  
+     <reportTemplate>
+	  <name>MOH710</name>
+	  <uid>fThloNgu0Lh</uid>
+	  <code>MOH710</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+  	     <!-- Adverse Events Following Immunization, default -->
+		 <dataValueTemplate dataElement="moh01" disaggregation="mohtot01">
+           <annotation>
+				select count(*)
+				from openmrs.vac_vaccinations v,openmrs.vac_adverse_reactions r
+				where v.vaccination_id = r.vaccination_id
+				and r.retired = 0
+				and v.administered = 1
+				and DATE(r.logged_date) >= :startOfPeriod
+				and DATE(r.logged_date) &lt;= :endOfPeriod
+				and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+</reportTemplates>
