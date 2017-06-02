@@ -13,7 +13,7 @@
      </disaggregations>
   
      <reportTemplate>
-	  <name>Admissions and Readmissions Report</name>
+	  <name>Admissions and Readmissions Analytic</name>
 	  <uid>QTH0GWrC9sm</uid>
 	  <code>adrd01</code>
 	  <periodType>Daily</periodType>
@@ -59,9 +59,9 @@
 					and v.patient_id = p.person_id
 					GROUP By v.patient_id
 				) s 
-				where 5 >= (YEAR(s.date_val) - YEAR(s.birthdate))
+				where 5 &lt;= (YEAR(s.date_val) - YEAR(s.birthdate))
 				and DATE(s.date_val) >= :startOfPeriod
-				and DATE(s.date_val) &lt;= :endOfPeriod
+				and DATE(s.date_val) &lt; :endOfPeriod
 				and s.location_id = :locationId
     	   </annotation>
   	     </dataValueTemplate>
@@ -75,9 +75,9 @@
 					and v.patient_id = p.person_id
 					GROUP By v.patient_id
 				) s 
-				where 5 &lt; (YEAR(s.date_val) - YEAR(s.birthdate))
+				where 5 > (YEAR(s.date_val) - YEAR(s.birthdate))
 				and DATE(s.date_val) >= :startOfPeriod
-				and DATE(s.date_val) &lt;= :endOfPeriod
+				and DATE(s.date_val) &lt; :endOfPeriod
 				and s.location_id = :locationId
     	   </annotation>
   	     </dataValueTemplate>
@@ -94,9 +94,9 @@
 					 ) q)
 				and v.voided = 0
 				and v.patient_id = p.person_id
-				and 5 >= (YEAR(v.date_started) - YEAR(p.birthdate))
+				and 5 &lt;= (YEAR(v.date_started) - YEAR(p.birthdate))
 				and DATE(v.date_started) >= :startOfPeriod
-				and DATE(v.date_started) &lt;= :endOfPeriod
+				and DATE(v.date_started) &lt; :endOfPeriod
 				and v.location_id = :locationId
     	   </annotation>
   	     </dataValueTemplate>
@@ -113,9 +113,9 @@
 					 ) q)
 				and v.voided = 0
 				and v.patient_id = p.person_id
-				and 5 &lt; (YEAR(v.date_started) - YEAR(p.birthdate))
+				and 5 > (YEAR(v.date_started) - YEAR(p.birthdate))
 				and DATE(v.date_started) >= :startOfPeriod
-				and DATE(v.date_started) &lt;= :endOfPeriod
+				and DATE(v.date_started) &lt; :endOfPeriod
 				and v.location_id = :locationId
     	   </annotation>
   	     </dataValueTemplate>

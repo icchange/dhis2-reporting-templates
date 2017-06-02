@@ -13,6 +13,18 @@
 	   <dataElement uid="GoaqFZTg19P" code="prog08" name="HIV Exposed" type="int"/> <!-- program_id:9 -->
 	   <dataElement uid="wMuz6R1b2ar" code="prog09" name="HIV Exposed Infant" type="int"/> <!-- program_id:10 -->
 	   <dataElement uid="BORm7DDjcRy" code="prog10" name="CWC" type="int"/> <!-- program_id:11 -->
+	   
+	   <dataElement uid="HjkixGUkrv1" code="vt01" name="visittype:Outpatient" type="int" />
+	   <dataElement uid="zBFgFL6LQFl" code="vt02" name="visittype:Inpatient" type="int" />
+	   <dataElement uid="X1tpMRGfdW1" code="vt03" name="visittype:CWC" type="int" />
+	   <dataElement uid="lM8JKtDDuKa" code="vt04" name="visittype:CCC-HIV" type="int" />
+	   <dataElement uid="dprslXOhPse" code="vt05" name="visittype:CCC-TB" type="int" />
+	   <dataElement uid="kWdP3ryusaW" code="vt06" name="visittype:Maternity" type="int" />
+	   <dataElement uid="rrm6WQr2m3p" code="vt07" name="visittype:Pediatrics" type="int" />
+	   <dataElement uid="o91wgC5El7f" code="vt08" name="visittype:Nutrition" type="int" />
+	   <dataElement uid="gjtdlbXePV3" code="vt09" name="visittype:ANC" type="int" />
+	   <dataElement uid="OdTag8ylnod" code="vt10" name="visittype:PNC" type="int" />
+	   <dataElement uid="b1TdZVfTXv9" code="vt11" name="visittype:Family Planning" type="int" />
      </dataElements>
 
 	 <disaggregations>
@@ -20,7 +32,7 @@
      </disaggregations>
   
      <reportTemplate>
-	  <name>Program Attendence</name>
+	  <name>Program Attendence Analytic</name>
 	  <uid>Gb69LP6kNlO</uid>
 	  <code>proglist01</code>
 	  <periodType>Monthly</periodType>
@@ -145,6 +157,140 @@
 				and DATE(pp.date_enrolled) &lt;= :endOfPeriod
 				and pp.location_id = :locationId
     	   </annotation>
+  	     </dataValueTemplate>
+		 
+		 <!-- visit types -->
+		 <!-- Outpatient -->
+		 <dataValueTemplate dataElement="vt01" disaggregation="progtotal01">
+           <annotation>
+			Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 1
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Inpatient -->
+		 <dataValueTemplate dataElement="vt02" disaggregation="progtotal01">
+           <annotation>
+		   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 2
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+    	   </annotation>
+  	     </dataValueTemplate>
+		 <!-- CWC -->
+		 <dataValueTemplate dataElement="vt03" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 3
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- CCC-HIV -->
+		 <dataValueTemplate dataElement="vt04" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 4
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- CCC-TB -->
+		 <dataValueTemplate dataElement="vt05" disaggregation="progtotal01">
+           <annotation>
+			Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 5
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Maternity -->
+		 <dataValueTemplate dataElement="vt06" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 6
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>	
+		 <!-- Pediatrics -->
+		 <dataValueTemplate dataElement="vt07" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 7
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Nutrition -->
+		 <dataValueTemplate dataElement="vt08" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 8
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- ANC -->
+		 <dataValueTemplate dataElement="vt09" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 9
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- PNC -->
+		 <dataValueTemplate dataElement="vt10" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 10
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <!-- Family Planning -->
+		 <dataValueTemplate dataElement="vt11" disaggregation="progtotal01">
+           <annotation>
+    	   	Select count(*) 
+			from openmrs.visit v
+			where v.visit_type_id = 11
+			and v.voided = 0
+			and date(v.date_started) >= :startOfPeriod
+			and date(v.date_started) &lt; :endOfPeriod
+			and v.location_id = :locationId
+		   </annotation>
   	     </dataValueTemplate>
 		 
 	  </dataValueTemplates>

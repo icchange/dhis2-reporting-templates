@@ -19,7 +19,7 @@
 	 </dataElementQuerys>
 	 
      <reportTemplate>
-	  <name>Number of Procedures</name>
+	  <name>Number of Procedures Analytic</name>
 	  <uid>vfaGdIpV09z</uid>
 	  <code>procedures01</code>
 	  <periodType>Monthly</periodType>

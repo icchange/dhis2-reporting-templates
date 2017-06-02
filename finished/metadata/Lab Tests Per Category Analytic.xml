@@ -5,6 +5,7 @@
 	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="defaulttotal01" name="default"/>
      </disaggregations>
 	 
+	 
 	 <dataElementQuerys>
 		<dataElementQuery uid="test" prefix="labtest" codeprefix="labtestcode" disaggregation="defaulttotal01" >
 			<annotation>
@@ -12,7 +13,7 @@
 				FROM openmrs.concept_name cn,openmrs.concept c,openmrs.concept_class cc 
 				where cn.concept_id = c.concept_id 
 				and c.class_id = cc.concept_class_id
-				and cc.name in('labset')
+				and cc.name in('Test','Procedure','KMRI_labs')
 				and cn.concept_name_type = 'FULLY_SPECIFIED'
 				and cn.locale = 'en'
   			</annotation>	
@@ -20,7 +21,7 @@
 	 </dataElementQuerys>
   
      <reportTemplate>
-	  <name>Lab Tests Per Catagory</name>
+	  <name>Lab Tests Per Catagory Analytic</name>
 	  <uid>HPZdF08hVgl</uid>
 	  <code>ltpc01</code>
 	  <periodType>Monthly</periodType>
@@ -29,12 +30,7 @@
            <annotation>
 				select count(*)
 				from openmrs.laboratory_test l
-				where l.lab_test_concept_id in(
-					SELECT cs.concept_id
-					FROM openmrs.concept_set cs,openmrs.concept c
-					WHERE cs.concept_set = c.concept_id
-					and cs.concept_set = #metaDataId
-				)
+				where l.lab_test_concept_id = #metaDataId
 				and DATE(l.date_created) >= :startOfPeriod
 				and DATE(l.date_created) &lt;= :endOfPeriod
 				and l.lab_location_id = :locationId

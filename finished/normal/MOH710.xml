@@ -184,16 +184,61 @@
   	     </dataValueTemplate>			 
 		 
 		 <!-- Fully Immunized Child (FIC), At 1 year -->
-		 <!-- todo still need to find out how this is captured -->
-		 <!--
 		 <dataValueTemplate dataElement="moh06" disaggregation="mohtot03">
            <annotation>
-			
-				SELECT 0
-				where :startOfPeriod != :endOfPeriod
+				SELECT count(*) 
+				FROM openmrs.person p,openmrs.vac_vaccinations v1,
+				openmrs.vac_vaccinations v2,
+				openmrs.vac_vaccinations v3,
+				openmrs.vac_vaccinations v4,
+				openmrs.vac_vaccinations v5,
+				openmrs.vac_vaccinations v6,
+				openmrs.vac_vaccinations v7,
+				openmrs.vac_vaccinations v8,
+				openmrs.vac_vaccinations v9,
+				openmrs.vac_vaccinations v10,
+				openmrs.vac_vaccinations v11,
+				openmrs.vac_vaccinations v12
+				WHERE p.birthdate = DATE_SUB(:startOfPeriod, INTERVAL 9 MONTH)
+				and :endOfPeriod = :endOfPeriod
+				and v1.patient_id = p.person_id
+				and v2.patient_id = p.person_id
+				and v3.patient_id = p.person_id
+				and v4.patient_id = p.person_id
+				and v5.patient_id = p.person_id
+				and v6.patient_id = p.person_id
+				and v7.patient_id = p.person_id
+				and v8.patient_id = p.person_id
+				and v9.patient_id = p.person_id
+				and v10.patient_id = p.person_id
+				and v11.patient_id = p.person_id
+				and v12.patient_id = p.person_id
+				and v1.vaccine_id = 4
+				and v1.administered = 1
+				and v2.vaccine_id = 5
+				and v2.administered = 1
+				and v3.vaccine_id = 6
+				and v3.administered = 1				
+				and v4.vaccine_id = 7
+				and v4.administered = 1		
+				and v5.vaccine_id = 8
+				and v5.administered = 1	
+				and v6.vaccine_id = 9
+				and v6.administered = 1	
+				and v7.vaccine_id = 10
+				and v7.administered = 1					
+				and v8.vaccine_id = 11
+				and v8.administered = 1
+				and v9.vaccine_id = 12
+				and v9.administered = 1	
+				and v10.vaccine_id = 13
+				and v10.administered = 1	
+				and v11.vaccine_id = 14
+				and v11.administered = 1	
+				and v12.vaccine_id = 15
+				and v12.administered = 1	
     	   </annotation>
   	     </dataValueTemplate>
-		 -->
 		 
 		 <!-- IPV, Under-Above 1 Year -->
 		 <!-- currently not in vaccination module -->
@@ -503,66 +548,86 @@
 		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06a">
            <annotation>
 			SELECT count(*) 
-			from openmrs.obs o,openmrs.person p
-			where o.person_id = p.person_id
-			and o.concept_id = 160055
-			and o.value_numeric = 1
-			and o.voided = 0
-			and DATE(o.obs_datetime) >= :startOfPeriod
-			and DATE(o.obs_datetime) &lt;= :endOfPeriod
-			and o.location_id = :locationId	
+			from openmrs.obs o1,openmrs.obs o2,openmrs.person p
+			where o1.person_id = p.person_id
+			and o1.encounter_id = o2.encounter_id
+			and o1.concept_id = 160055
+			and o1.value_numeric = 1
+			and o1.voided = 0
+			and o2.concept_id = 54
+			and o2.value_coded = 1065
+			and o2.voided = 0
+			and DATE(o1.obs_datetime) >= :startOfPeriod
+			and DATE(o1.obs_datetime) &lt;= :endOfPeriod
+			and o1.location_id = :locationId				
     	   </annotation>
   	     </dataValueTemplate>
 		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06b">
            <annotation>
 			SELECT count(*) 
-			from openmrs.obs o,openmrs.person p
-			where o.person_id = p.person_id
-			and o.concept_id = 160055
-			and o.value_numeric = 2
-			and o.voided = 0
-			and DATE(o.obs_datetime) >= :startOfPeriod
-			and DATE(o.obs_datetime) &lt;= :endOfPeriod
-			and o.location_id = :locationId	
+			from openmrs.obs o1,openmrs.obs o2,openmrs.person p
+			where o1.person_id = p.person_id
+			and o1.encounter_id = o2.encounter_id
+			and o1.concept_id = 160055
+			and o1.value_numeric = 2
+			and o1.voided = 0
+			and o2.concept_id = 54
+			and o2.value_coded = 1065
+			and o2.voided = 0
+			and DATE(o1.obs_datetime) >= :startOfPeriod
+			and DATE(o1.obs_datetime) &lt;= :endOfPeriod
+			and o1.location_id = :locationId	
     	   </annotation>
   	     </dataValueTemplate>
 		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06c">
            <annotation>
 			SELECT count(*) 
-			from openmrs.obs o,openmrs.person p
-			where o.person_id = p.person_id
-			and o.concept_id = 160055
-			and o.value_numeric = 3
-			and o.voided = 0
-			and DATE(o.obs_datetime) >= :startOfPeriod
-			and DATE(o.obs_datetime) &lt;= :endOfPeriod
-			and o.location_id = :locationId	
+			from openmrs.obs o1,openmrs.obs o2,openmrs.person p
+			where o1.person_id = p.person_id
+			and o1.encounter_id = o2.encounter_id
+			and o1.concept_id = 160055
+			and o1.value_numeric = 3
+			and o1.voided = 0
+			and o2.concept_id = 54
+			and o2.value_coded = 1065
+			and o2.voided = 0
+			and DATE(o1.obs_datetime) >= :startOfPeriod
+			and DATE(o1.obs_datetime) &lt;= :endOfPeriod
+			and o1.location_id = :locationId	
     	   </annotation>
   	     </dataValueTemplate>
 		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06d">
            <annotation>
 			SELECT count(*) 
-			from openmrs.obs o,openmrs.person p
-			where o.person_id = p.person_id
-			and o.concept_id = 160055
-			and o.value_numeric = 4
-			and o.voided = 0
-			and DATE(o.obs_datetime) >= :startOfPeriod
-			and DATE(o.obs_datetime) &lt;= :endOfPeriod
-			and o.location_id = :locationId	
+			from openmrs.obs o1,openmrs.obs o2,openmrs.person p
+			where o1.person_id = p.person_id
+			and o1.encounter_id = o2.encounter_id
+			and o1.concept_id = 160055
+			and o1.value_numeric = 4
+			and o1.voided = 0
+			and o2.concept_id = 54
+			and o2.value_coded = 1065
+			and o2.voided = 0
+			and DATE(o1.obs_datetime) >= :startOfPeriod
+			and DATE(o1.obs_datetime) &lt;= :endOfPeriod
+			and o1.location_id = :locationId	
     	   </annotation>
   	     </dataValueTemplate>
 		 <dataValueTemplate dataElement="moh20" disaggregation="mohtot06e">
            <annotation>
 			SELECT count(*) 
-			from openmrs.obs o,openmrs.person p
-			where o.person_id = p.person_id
-			and o.concept_id = 160055
-			and o.value_numeric = 5
-			and o.voided = 0
-			and DATE(o.obs_datetime) >= :startOfPeriod
-			and DATE(o.obs_datetime) &lt;= :endOfPeriod
-			and o.location_id = :locationId	
+			from openmrs.obs o1,openmrs.obs o2,openmrs.person p
+			where o1.person_id = p.person_id
+			and o1.encounter_id = o2.encounter_id
+			and o1.concept_id = 160055
+			and o1.value_numeric = 5
+			and o1.voided = 0
+			and o2.concept_id = 54
+			and o2.value_coded = 1065
+			and o2.voided = 0
+			and DATE(o1.obs_datetime) >= :startOfPeriod
+			and DATE(o1.obs_datetime) &lt;= :endOfPeriod
+			and o1.location_id = :locationId	
     	   </annotation>
   	     </dataValueTemplate>
 		 

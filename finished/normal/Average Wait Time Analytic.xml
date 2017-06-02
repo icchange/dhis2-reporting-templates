@@ -10,7 +10,7 @@
      </disaggregations>
   
      <reportTemplate>
-	  <name>Wait Time</name>
+	  <name>Average Wait Time Analytic</name>
 	  <uid>KgZ9maBtqQJ</uid>
 	  <code>wait01</code>
 	  <periodType>Daily</periodType>

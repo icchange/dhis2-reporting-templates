@@ -10,7 +10,7 @@
      </disaggregations>
   
      <reportTemplate>
-	  <name>death rate report</name>
+	  <name>Deaths Analytic</name>
 	  <uid>Tex4Yp5maO1</uid>
 	  <code>drr01</code>
 	  <periodType>Monthly</periodType>

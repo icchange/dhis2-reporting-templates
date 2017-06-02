@@ -13,7 +13,7 @@
      </disaggregations>
   
      <reportTemplate>
-	  <name>Referrals Report</name>
+	  <name>Referrals Analytic</name>
 	  <uid>DYJtEok9HVN</uid>
 	  <code>reftotals01</code>
 	  <periodType>Daily</periodType>
@@ -38,7 +38,7 @@
 				where o.person_id = p.person_id 
 				and concept_id = 1272
 				and o.voided = 0
-				and o.comments like 'REFER_ref_loc%'
+				and o.comments like 'REFER_ref_loc_%'
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and DATE(o.obs_datetime) &lt;= :endOfPeriod
 				and o.location_id = :locationId
@@ -53,7 +53,7 @@
 				and concept_id = 161257
 				and o.voided = 0
 				and o.comments like 'REFERloc%'
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate))
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and DATE(o.obs_datetime) &lt;= :endOfPeriod
 				and o.location_id = :locationId
@@ -67,7 +67,7 @@
 				and concept_id = 161257
 				and o.voided = 0
 				and o.comments like 'REFERloc%'
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate))
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and DATE(o.obs_datetime) &lt;= :endOfPeriod
 				and o.location_id = :locationId
@@ -80,7 +80,7 @@
 				and concept_id = 1272
 				and o.voided = 0
 				and o.comments like 'REFER_ref_loc%'
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate))
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and DATE(o.obs_datetime) &lt;= :endOfPeriod
 				and o.location_id = :locationId
@@ -94,7 +94,7 @@
 				and concept_id = 1272
 				and o.voided = 0
 				and o.comments like 'REFER_ref_loc%'
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate))
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate))
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and DATE(o.obs_datetime) &lt;= :endOfPeriod
 				and o.location_id = :locationId

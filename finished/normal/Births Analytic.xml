@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<reportTemplates xmlns:d2="http://dhis2.org/schema/dxf/2.0">
+
+     <dataElements>
+		<dataElement uid="sL0h6Oqgow7" code="births01" name="birth: Term Delivery" type="int"/><!-- Term Delivery 1395 -->
+		<dataElement uid="i6wLSbSjzbi" code="births02" name="birth: Preterm Delivery" type="int"/><!-- Preterm Delivery less than 37 weeks 129218 -->
+		<dataElement uid="Z88z6aYbkP3" code="births03" name="birth: Fresh Still Birth" type="int"/><!-- Fresh Still Birth 159916 -->
+		<dataElement uid="DEtwMqwlgbP" code="births04" name="birth: Macerated Still Birth" type="int"/><!-- Macerated still birth 135436 -->
+		<dataElement uid="XkHxv57WFSV" code="births05" name="birth: Spontaneous Abortion" type="int"/><!-- Spontaneous abortion 126127-->
+		<dataElement uid="kLWT2r1AVHe" code="births06" name="birth: Therapeutic Abortion" type="int"/><!-- Therapeutic abortion 159896 -->
+     </dataElements>
+	 
+	 <disaggregations>
+	   <disaggregation uid="SKniVEThyX6" attributeOptionCombo="SKniVEThyX6" code="itemcounttot01" name="default"/>
+     </disaggregations>
+
+	 
+	 <reportTemplate>
+	  <name>Births Analytic</name>
+	  <uid>BsPmifqgDTo</uid>
+	  <code>birthsset01</code>
+	  <periodType>Monthly</periodType>
+	  <dataValueTemplates>
+		 <dataValueTemplate dataElement="births01" disaggregation="itemcounttot01">
+           <annotation>
+		   <!--
+			SELECT count(*) FROM openmrs.obs o1,openmrs.obs o2
+			where o1.comments like 'a_%' 
+			and o2.comments like 'c_%'
+			and Substring(o1.comments,2,length(o1.comments)-2) 
+				= Substring(o2.comments,2,length(o2.comments)-2)
+			and o1.encounter_id = o2.encounter_id
+			and o2.value_coded = 1395
+			and o1.voided = 0
+			and o2.voided = 0
+			and Date(o1.value_datetime) >= :startOfPeriod
+			and DATE(o1.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+			-->
+			
+			select count(*)
+			from openmrs.entered_form ef,openmrs.encounter e,openmrs.obs o1,openmrs.obs o2
+			where ef.encounter = e.encounter_id
+			and e.encounter_id = o1.encounter_id
+			and o1.encounter_id = o2.encounter_id
+			and ef.name = 'Labour_and_Delivery_Form_2_Summary_of_Labour'
+			and o1.concept_id = 161033
+			and o1.value_coded = 1395
+			and o1.voided = 0
+			and o2.concept_id = 160715
+			and o2.voided = 0
+			and Date(o2.value_datetime) >= :startOfPeriod
+			and DATE(o2.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="births02" disaggregation="itemcounttot01">
+           <annotation>
+			<!--
+		    SELECT count(*) FROM openmrs.obs o1,openmrs.obs o2
+			where o1.comments like 'a_%' 
+			and o2.comments like 'c_%'
+			and Substring(o1.comments,2,length(o1.comments)-2) 
+				= Substring(o2.comments,2,length(o2.comments)-2)
+			and o1.encounter_id = o2.encounter_id
+			and o2.value_coded = 129218
+			and o1.voided = 0
+			and o2.voided = 0
+			and Date(o1.value_datetime) >= :startOfPeriod
+			and DATE(o1.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId		
+			-->
+			select count(*)
+			from openmrs.entered_form ef,openmrs.encounter e,openmrs.obs o1,openmrs.obs o2
+			where ef.encounter = e.encounter_id
+			and e.encounter_id = o1.encounter_id
+			and o1.encounter_id = o2.encounter_id
+			and ef.name = 'Labour_and_Delivery_Form_2_Summary_of_Labour'
+			and o1.concept_id = 161033
+			and o1.value_coded = 129218
+			and o1.voided = 0
+			and o2.concept_id = 160715
+			and o2.voided = 0
+			and Date(o2.value_datetime) >= :startOfPeriod
+			and DATE(o2.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>		
+		 <dataValueTemplate dataElement="births03" disaggregation="itemcounttot01">
+           <annotation>
+		   <!--
+		   	SELECT count(*) FROM openmrs.obs o1,openmrs.obs o2
+			where o1.comments like 'a_%' 
+			and o2.comments like 'c_%'
+			and Substring(o1.comments,2,length(o1.comments)-2) 
+				= Substring(o2.comments,2,length(o2.comments)-2)
+			and o1.encounter_id = o2.encounter_id
+			and o2.value_coded = 125872
+			and o1.voided = 0
+			and o2.voided = 0
+			and Date(o1.value_datetime) >= :startOfPeriod
+			and DATE(o1.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+			-->
+			select count(*)
+			from openmrs.entered_form ef,openmrs.encounter e,openmrs.obs o1,openmrs.obs o2
+			where ef.encounter = e.encounter_id
+			and e.encounter_id = o1.encounter_id
+			and o1.encounter_id = o2.encounter_id
+			and ef.name = 'Labour_and_Delivery_Form_2_Summary_of_Labour'
+			and o1.concept_id = 161033
+			and o1.value_coded = 159916
+			and o1.voided = 0
+			and o2.concept_id = 160715
+			and o2.voided = 0
+			and Date(o2.value_datetime) >= :startOfPeriod
+			and DATE(o2.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="births04" disaggregation="itemcounttot01">
+           <annotation>		 
+			select count(*)
+			from openmrs.entered_form ef,openmrs.encounter e,openmrs.obs o1,openmrs.obs o2
+			where ef.encounter = e.encounter_id
+			and e.encounter_id = o1.encounter_id
+			and o1.encounter_id = o2.encounter_id
+			and ef.name = 'Labour_and_Delivery_Form_2_Summary_of_Labour'
+			and o1.concept_id = 161033
+			and o1.value_coded = 135436
+			and o1.voided = 0
+			and o2.concept_id = 160715
+			and o2.voided = 0
+			and Date(o2.value_datetime) >= :startOfPeriod
+			and DATE(o2.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="births05" disaggregation="itemcounttot01">
+           <annotation>		 
+			select count(*)
+			from openmrs.entered_form ef,openmrs.encounter e,openmrs.obs o1,openmrs.obs o2
+			where ef.encounter = e.encounter_id
+			and e.encounter_id = o1.encounter_id
+			and o1.encounter_id = o2.encounter_id
+			and ef.name = 'Labour_and_Delivery_Form_2_Summary_of_Labour'
+			and o1.concept_id = 161033
+			and o1.value_coded = 126127
+			and o1.voided = 0
+			and o2.concept_id = 160715
+			and o2.voided = 0
+			and Date(o2.value_datetime) >= :startOfPeriod
+			and DATE(o2.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 <dataValueTemplate dataElement="births06" disaggregation="itemcounttot01">
+           <annotation>		 
+			select count(*)
+			from openmrs.entered_form ef,openmrs.encounter e,openmrs.obs o1,openmrs.obs o2
+			where ef.encounter = e.encounter_id
+			and e.encounter_id = o1.encounter_id
+			and o1.encounter_id = o2.encounter_id
+			and ef.name = 'Labour_and_Delivery_Form_2_Summary_of_Labour'
+			and o1.concept_id = 161033
+			and o1.value_coded = 159896
+			and o1.voided = 0
+			and o2.concept_id = 160715
+			and o2.voided = 0
+			and Date(o2.value_datetime) >= :startOfPeriod
+			and DATE(o2.value_datetime) &lt; :endOfPeriod
+			and o1.location_id = :locationId
+		   </annotation>
+  	     </dataValueTemplate>
+		 
+	  </dataValueTemplates>
+     </reportTemplate>
+  
+</reportTemplates>

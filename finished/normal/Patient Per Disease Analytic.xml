@@ -113,7 +113,7 @@
      </disaggregations>
 	 
      <reportTemplate>
-	  <name>Patients per Disease</name>
+	  <name>Patients Per Disease Analytic</name>
 	  <uid>Dwkl1vLRskI</uid>
 	  <code>Disease01</code>
 	  <periodType>Monthly</periodType>
@@ -730,7 +730,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161749
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -743,7 +743,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161749
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -757,7 +757,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161775
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -770,7 +770,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161775
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -784,7 +784,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161753
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -797,7 +797,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161753
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -811,7 +811,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161745
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -824,7 +824,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161745
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -838,7 +838,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161763
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -851,7 +851,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161763
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -865,7 +865,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161774
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -878,7 +878,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161774
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -892,7 +892,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161770
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -905,7 +905,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161770
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -919,7 +919,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161744
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -932,7 +932,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161744
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -946,7 +946,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161762
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -959,7 +959,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161762
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -973,7 +973,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161758
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -986,7 +986,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161758
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1000,7 +1000,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 162007
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1013,7 +1013,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 162007
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1027,7 +1027,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161746
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1040,7 +1040,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161746
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1054,7 +1054,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161777
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1067,7 +1067,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161777
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1081,7 +1081,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161776
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1094,7 +1094,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161776
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1108,7 +1108,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161740
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1121,7 +1121,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161740
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1135,7 +1135,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161761
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1148,7 +1148,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161761
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1162,7 +1162,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161739
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1175,7 +1175,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161739
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1189,7 +1189,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161756
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1202,7 +1202,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161756
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1216,7 +1216,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161754
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1229,7 +1229,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161754
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1243,7 +1243,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161766
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1256,7 +1256,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161766
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1270,7 +1270,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161768
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1283,7 +1283,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161768
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1297,7 +1297,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161764
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1310,7 +1310,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161764
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1324,7 +1324,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161747
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1337,7 +1337,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161747
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1351,7 +1351,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161751
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1364,7 +1364,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161751
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1378,7 +1378,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161769
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1391,7 +1391,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161769
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1405,7 +1405,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161724
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1418,7 +1418,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161724
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1432,7 +1432,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161772
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1445,7 +1445,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161772
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1459,7 +1459,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161743
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1472,7 +1472,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161743
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1486,7 +1486,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161741
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1499,7 +1499,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161741
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1513,7 +1513,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161748
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1526,7 +1526,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161748
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1540,7 +1540,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161755
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1553,7 +1553,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161755
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1567,7 +1567,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161752
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1580,7 +1580,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161752
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1594,7 +1594,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161779
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1607,7 +1607,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161779
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1621,7 +1621,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161778
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1634,7 +1634,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161778
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1648,7 +1648,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161765
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1661,7 +1661,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161765
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1675,7 +1675,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161767
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1688,7 +1688,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161767
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1702,7 +1702,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161742
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1715,8 +1715,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161742
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1730,7 +1729,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 >= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 &lt;= (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161780
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod
@@ -1743,7 +1742,7 @@
 				from openmrs.person p, openmrs.obs o
 				where p.voided = 0 and o.voided = 0
 				and o.person_id = p.person_id
-				and 5 &lt; (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
+				and 5 > (YEAR(o.obs_datetime) - YEAR(p.birthdate)) 
 				and o.value_coded = 161780
 				and Date(o.obs_datetime) >= :startOfPeriod
 				and Date(o.obs_datetime) &lt;= :endOfPeriod

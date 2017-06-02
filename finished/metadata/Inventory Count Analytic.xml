@@ -9,23 +9,33 @@
      <dataElementQuerys>
 		<dataElementQuery uid="test" prefix="item" codeprefix="itemcode" disaggregation="itemcounttot01" >
 			<annotation>
-				SELECT i.item_id,i.name 
+				SELECT i.item_id,i.name
 				FROM openmrs.inv_item i 
-				where i.location_id = :locationId
-				and i.retired = 0
+				where i.retired = 0
+				order by item_id
 			</annotation>	
 		</dataElementQuery>
 	 </dataElementQuerys>
 	 
      <reportTemplate>
-	  <name>Inventory</name>
+	  <name>Inventory Count Analytic</name>
 	  <uid>mIg53n2xaRz</uid>
-	  <code>inv01</code>
+	  <code>inv02</code>
 	  <periodType>Monthly</periodType>
 	  <metaDataValueTemplates>
 		<metaDataValueTemplate disaggregation="itemcounttot01">
            <annotation>
-			SELECT ifnull(ot.rt,0) + ct.quantity
+		   <!--
+			SELECT ifnull(sum(i.quantity),0)
+			FROM openmrs.inv_item_stock i,openmrs.inv_stockroom s
+			WHERE i.stockroom_id = s.stockroom_id
+			and i.item_id = #metaDataId
+			and s.retired = 0
+			and :startOfPeriod != :endOfPeriod
+			and s.location_id = :locationId
+		   -->			
+		   <!--
+			SELECT ct.quantity - ifnull(ot.rt,0)
 			from (
 			SELECT ifnull(sum(i.quantity),0) as quantity
 			FROM openmrs.inv_item_stock i,openmrs.inv_stockroom s
@@ -39,6 +49,7 @@
 			(
 			select ifnull(sum(p.quantity),0) From 
 			(
+			
 			select
 			t.date_created,sum(t.quantity) as quantity
 			FROM 
@@ -50,6 +61,7 @@
 			and t.item_id = #metaDataId
 			group by t.date_created
 			order by t.date_created DESC
+			
 			) as p
 			where p.date_created >= d
 			) as total
@@ -65,11 +77,48 @@
 			) as rt
 			where rt.d > :endOfPeriod 
 			and :startOfPeriod = :startOfPeriod
-			) as ot	
+			) as ot
+			-->
+			
+			SELECT ct.quantity - ifnull(ot.rt,0)
+			from (
+			SELECT ifnull(sum(i.quantity),0) as quantity
+			FROM openmrs.inv_item_stock i,openmrs.inv_stockroom s
+			WHERE i.stockroom_id = s.stockroom_id
+			and s.location_id = :locationId
+			and i.item_id = #metaDataId
+			) as ct,(
+			select sum(transactionList.quantity) as rt
+			from (
+			select
+			t.date_created,sum(t.quantity) as quantity
+			FROM 
+			openmrs.inv_transaction t,openmrs.inv_stock_operation o,openmrs.inv_stockroom s
+			where t.operation_id = o.stock_operation_id
+			and t.stockroom_id = s.stockroom_id
+			and (o.status != 'CANCELLED' and o.status != 'pending')
+			and s.location_id = :locationId
+			and t.item_id = #metaDataId
+			and t.date_created > :endOfPeriod
+			and :startOfPeriod = :startOfPeriod
+			group by t.date_created
+			order by t.date_created DESC
+			) as transactionList
+			) as ot
+			
     	   </annotation>
 		</metaDataValueTemplate>
 		<metaDataValueTemplate disaggregation="itemcounttot02">
            <annotation>
+		   <!--
+			SELECT ifnull(sum(i.quantity),0) as quantity
+			FROM openmrs.inv_item_stock i,openmrs.inv_stockroom s
+			WHERE i.stockroom_id = s.stockroom_id
+			and :startOfPeriod = :startOfPeriod
+			and :endOfPeriod = :endOfPeriod
+			and s.location_id = :locationId
+			and i.item_id = #metaDataId
+
 			SELECT ifnull(ot.rt,0) + ct.quantity
 			from (
 			SELECT ifnull(sum(i.quantity),0) as quantity
@@ -110,7 +159,29 @@
 			) as rt
 			where rt.d > :endOfPeriod 
 			and :startOfPeriod = :startOfPeriod
-			) as ot	
+			) as ot
+			-->
+			select q.quantity from (
+			SELECT ifnull(sum(sd.quantity),0) as quantity,@num = i.default_expiration_period
+			FROM openmrs.inv_stock_operation_item sd,openmrs.inv_department d,openmrs.inv_item i, openmrs.inv_stock_operation so
+			WHERE sd.item_id = i.item_id
+			and i.department_id = d.department_id
+			and so.stock_operation_id = sd.operation_id
+			and d.location_id = 3
+			and i.item_id = #metaDataId
+			and :endOfPeriod = :endOfPeriod
+			and 
+				(
+					(
+						sd.calculated_expiration = 1
+						and DATE_ADD(so.date_created, INTERVAL @num MONTH) &lt; :startOfPeriod
+					)
+				or (
+						sd.expiration is not null
+						and sd.expiration &lt; :startOfPeriod
+					)
+				)
+			) as q
     	   </annotation>
 		</metaDataValueTemplate>
 	  </metaDataValueTemplates>

@@ -11,14 +11,15 @@
      </disaggregations>
 
 	 <reportTemplate>
-	  <name>Cost per Patient</name>
+	  <name>Cost per Patient Analytic</name>
 	  <uid>PgLhxeHDpW4</uid>
 	  <code>costperpatient01</code>
 	  <periodType>Daily</periodType>
 	  <dataValueTemplates>
 		 <dataValueTemplate dataElement="cpp01" disaggregation="itemcounttot01">
            <annotation>
-		    SELECT ifnull(AVG(list.at),0)
+		    <!--
+			SELECT ifnull(AVG(list.at),0)
 			FROM (
 			SELECT cb.patient_id,sum(cbp.amount_tendered) as at
 			FROM openmrs.cashier_bill_payment cbp,openmrs.cashier_bill cb
@@ -29,20 +30,40 @@
 			and cb.location_id = :locationId
 			group by cb.patient_id
 			) as list
+			-->
+			Select ifnull(AVG(list.tot),0)
+			from (
+				Select cbp.bill_id,sum(cbp.amount) as tot
+				from openmrs.cashier_bill_payment cbp,openmrs.cashier_bill cb
+				where cbp.bill_id = cb.bill_id
+				and cb.adjusted_bill_id in(	
+					select cb.adjusted_bill_id 
+					from openmrs.cashier_bill cb
+					where cb.adjusted_bill_id
+				)
+				and date(cb.date_created) >= :startOfPeriod
+				and date(cb.date_created) &lt; :endOfPeriod
+				and cb.location_id = :locationId
+				group by cbp.bill_id
+			) as list
 		   </annotation>
   	     </dataValueTemplate>
 		 <dataValueTemplate dataElement="cpp02" disaggregation="itemcounttot01">
            <annotation>
-		    SELECT ifnull(AVG(list.at),0)
-			FROM (
-			SELECT cbli.bill_id,sum(cbli.price) as at FROM openmrs.cashier_bill_line_item cbli,openmrs.cashier_bill cb
-			where cbli.bill_id = cb.bill_id
-			and cb.voided = 0
-			and cb.status in('PAID','POSTED','OVERPAID')
-			and DATE(cbli.date_created) >= :startOfPeriod
-			and DATE(cbli.date_created) &lt; :endOfPeriod
-			and cb.location_id = :locationId
-			group by cbli.bill_id
+			Select ifnull(AVG(list.tot),0)
+			from (
+				Select cbli.bill_id,sum(cbli.price*cbli.quantity) as tot
+				from openmrs.cashier_bill_line_item cbli,openmrs.cashier_bill cb
+				where cbli.bill_id = cb.bill_id
+				and cb.adjusted_bill_id in(	
+					select cb.adjusted_bill_id 
+					from openmrs.cashier_bill cb
+					where cb.adjusted_bill_id
+				)
+				and date(cb.date_created) >= :startOfPeriod
+				and date(cb.date_created) &lt; :endOfPeriod
+				and cb.location_id = :locationId
+				group by cbli.bill_id
 			) as list
 		   </annotation>
   	     </dataValueTemplate>			 
